@@ -1,56 +1,36 @@
 package reddit
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestGetTopPosts_GivenSomePosts(t *testing.T) {
-	//fakeServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-	//	fmt.Fprint(w, `
-	//	{
-	//		"data": {
-	//			"children": [
-	//				{
-	//					"data": {
-	//						"thumbnail": "http://thumbnail1.jpg",
-	//						"permalink": "/r/perma1",
-	//						"url": "https://url1",
-	//						"title": "title1",
-	//						"created_utc": 1000000001.0,
-	//					}
-	//				},
-	//				{
-	//					"data": {
-	//						"thumbnail": "http://thumbnail2.jpg",
-	//						"permalink": "/r/perma2",
-	//						"url": "https://url2",
-	//						"title": "title2",
-	//						"created_utc": 1000000002.0,
-	//					}
-	//				}
-	//			]
-	//		}
-	//	}
-	//	`)
-	//}))
-	//defer fakeServer.Close()
+	client := New(WithFakeClient("https://www.reddit.com/r/some-sub", "{}"))
 
-	client := New(FakeClientWithResponse("a response"))
+	posts, err := client.GetTopPosts("some-sub")
 
-	posts, _ := client.GetTopPosts("some-sub")
-
-	assert.Len(t, posts, 2)
-}
-
-func FakeClientWithResponse(resp string) option {
-	return func(reddit *Reddit) {
-		//reddit.Client :=
+	if assert.NoError(t, err) {
+		assert.Len(t, posts, 0)
 	}
 }
 
-type fakeClient struct{}
+func WithFakeClient(answerUrl, answerResponse string) option {
+	return func(reddit *Reddit) {
+		reddit.client = &fakeClient{answerUrl, answerResponse}
+	}
+}
 
-func (c *fakeClient) Get(url string) ([]byte, error) {
-	return []byte("a response"), nil
+type fakeClient struct {
+	answerUrl      string
+	answerResponse string
+}
+
+func (client *fakeClient) Get(url string) ([]byte, error) {
+	if client.answerUrl == url {
+		return []byte(client.answerResponse), nil
+	}
+
+	return nil, fmt.Errorf("url unknown %v", url)
 }

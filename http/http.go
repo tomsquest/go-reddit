@@ -8,7 +8,11 @@ import (
 	"time"
 )
 
-type HttpClient struct {
+type HttpClient interface {
+	Get(string) ([]byte, error)
+}
+
+type httpClient struct {
 	realClient *http.Client
 	userAgent  string
 }
@@ -18,13 +22,13 @@ func NewHttpClient(userAgent string) HttpClient {
 		Timeout: time.Second * 10,
 	}
 
-	return HttpClient{
+	return &httpClient{
 		realClient: client,
 		userAgent:  userAgent,
 	}
 }
 
-func (client *HttpClient) Get(url string) ([]byte, error) {
+func (client *httpClient) Get(url string) ([]byte, error) {
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, errwrap.Wrapf("Error building request: {{err}}", err)
