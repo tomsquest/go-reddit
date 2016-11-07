@@ -1,7 +1,6 @@
 package reddit
 
 import (
-	"encoding/json"
 	"github.com/hashicorp/errwrap"
 	"github.com/tomsquest/go-reddit/http"
 	"log"
@@ -25,22 +24,6 @@ func New(opts ...option) Reddit {
 	return reddit
 }
 
-type SubredditResponse struct {
-	Data struct {
-		Children []struct {
-			Post Post `json:"data"`
-		}
-	}
-}
-
-type Post struct {
-	Title     string
-	Permalink string
-	Url       string
-	Thumbnail string
-	Created   float64 `json:"created_utc"`
-}
-
 func (reddit *Reddit) GetTopPosts(subreddit string) ([]Post, error) {
 
 	log.Println("Getting top posts")
@@ -52,15 +35,12 @@ func (reddit *Reddit) GetTopPosts(subreddit string) ([]Post, error) {
 		return nil, errwrap.Wrapf("Unable to get posts of subreddit '"+subreddit+"': {{err}}", err)
 	}
 
-	var subs SubredditResponse
-	err = json.Unmarshal(data, &subs)
+	posts, err := UnmarshallPosts(data)
 	if err != nil {
-		log.Fatalf("Unable to read response: %v\n", err)
+		return nil, errwrap.Wrapf("Unable to unmarshall posts: {{err}}", err)
 	}
 
-	log.Printf("Subreddits: %#v\n", subs)
+	log.Printf("Posts: %#v\n", posts)
 
-	log.Println("# Done")
-
-	return nil, nil
+	return posts, nil
 }
