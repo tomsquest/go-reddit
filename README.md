@@ -1,26 +1,23 @@
 # Go-Reddit by email
 
-## Features:
+## Todo
 
-1. [ ] List the `top` posts of a subreddit
-1. [ ] Extract the json
+* `client` doit avoir une baseUrl en param
+* `client.Get` doit prendre uniquement un subreddit
+* Créer un `PostUnmarshaller`
 
 ## Learn
 
-* Concurrency
-* Logging
-* net/http
-    * fake http (simulate Reddit)
-* Testing
-* Email
-* Templating
-
-
-## Todo
-
-
+* [x] net/http
+* [x] fake http (simulate Reddit)
+* [ ] Concurrency
+* [ ] Logging
+* [ ] Testing
+* [ ] Email
+* [ ] Templating
 
 ## Maybe
 
+* Dependency injection automatique
 * Switch to `fasthttp`: https://godoc.org/github.com/valyala/fasthttp
 
