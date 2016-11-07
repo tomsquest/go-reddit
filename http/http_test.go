@@ -12,6 +12,7 @@ func TestGet_existingUrl(t *testing.T) {
 	fakeServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, `a response`)
 	}))
+	defer fakeServer.Close()
 
 	client := NewHttpClient("user-agent")
 
@@ -26,6 +27,7 @@ func TestGet_AddUserAgent(t *testing.T) {
 	fakeServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		assert.Equal(t, r.Header.Get("User-Agent"), "test user agent")
 	}))
+	defer fakeServer.Close()
 
 	client := NewHttpClient("test user agent")
 
@@ -34,6 +36,7 @@ func TestGet_AddUserAgent(t *testing.T) {
 
 func TestGet_given404(t *testing.T) {
 	fakeServer := httptest.NewServer(http.NotFoundHandler())
+	defer fakeServer.Close()
 
 	client := NewHttpClient("user-agent")
 
