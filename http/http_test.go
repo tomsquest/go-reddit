@@ -1,4 +1,4 @@
-package client
+package http
 
 import (
 	"fmt"
@@ -13,7 +13,7 @@ func TestGet_existingUrl(t *testing.T) {
 		fmt.Fprint(w, `a response`)
 	}))
 
-	client := New("user-agent")
+	client := NewHttpClient("user-agent")
 
 	resp, err := client.Get(fakeServer.URL + "/some-page")
 
@@ -27,7 +27,7 @@ func TestGet_AddUserAgent(t *testing.T) {
 		assert.Equal(t, r.Header.Get("User-Agent"), "test user agent")
 	}))
 
-	client := New("test user agent")
+	client := NewHttpClient("test user agent")
 
 	client.Get(fakeServer.URL + "/some-page")
 }
@@ -35,7 +35,7 @@ func TestGet_AddUserAgent(t *testing.T) {
 func TestGet_given404(t *testing.T) {
 	fakeServer := httptest.NewServer(http.NotFoundHandler())
 
-	client := New("user-agent")
+	client := NewHttpClient("user-agent")
 
 	resp, err := client.Get(fakeServer.URL + "/unknown")
 

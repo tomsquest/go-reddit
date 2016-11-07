@@ -2,8 +2,6 @@
 
 ## Todo
 
-* `client` doit avoir une baseUrl en param
-* `client.Get` doit prendre uniquement un subreddit
 * Créer un `PostUnmarshaller`
 
 ## Learn
@@ -18,6 +16,6 @@
 
 ## Maybe
 
-* Dependency injection automatique
+* Dependency injection
 * Switch to `fasthttp`: https://godoc.org/github.com/valyala/fasthttp
 

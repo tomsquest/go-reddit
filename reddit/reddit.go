@@ -3,19 +3,19 @@ package reddit
 import (
 	"encoding/json"
 	"github.com/hashicorp/errwrap"
-	"github.com/tomsquest/go-reddit/client"
+	"github.com/tomsquest/go-reddit/http"
 	"log"
 )
 
 type Reddit struct {
-	client client.Client
+	client http.HttpClient
 }
 
 type option func(*Reddit)
 
 func New(opts ...option) Reddit {
 	reddit := Reddit{
-		client: client.New("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1"),
+		client: http.NewHttpClient("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1"),
 	}
 
 	for _, opt := range opts {
@@ -45,16 +45,15 @@ func (reddit *Reddit) GetTopPosts(subreddit string) ([]Post, error) {
 
 	log.Println("Getting top posts")
 
-	data, err := reddit.client.Get(subreddit)
+	url := "https://www.reddit.com/r/" + subreddit
+
+	data, err := reddit.client.Get(url)
 	if err != nil {
 		return nil, errwrap.Wrapf("Unable to get posts of subreddit '"+subreddit+"': {{err}}", err)
 	}
 
 	var subs SubredditResponse
-	//err = json.NewDecoder(data).Decode(&subs)
 	err = json.Unmarshal(data, &subs)
-
-	//_, err = io.Copy(os.Stdout, resp.Body)
 	if err != nil {
 		log.Fatalf("Unable to read response: %v\n", err)
 	}

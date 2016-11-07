@@ -1,4 +1,4 @@
-package client
+package http
 
 import (
 	"fmt"
@@ -8,32 +8,31 @@ import (
 	"time"
 )
 
-type Client struct {
+type HttpClient struct {
 	realClient *http.Client
 	userAgent  string
 }
 
-func New(userAgent string) Client {
-	var realClient = &http.Client{
+func NewHttpClient(userAgent string) HttpClient {
+	var client = &http.Client{
 		Timeout: time.Second * 10,
 	}
 
-	return Client{
-		realClient: realClient,
+	return HttpClient{
+		realClient: client,
 		userAgent:  userAgent,
 	}
 }
 
-func (c *Client) Get(url string) ([]byte, error) {
-
+func (client *HttpClient) Get(url string) ([]byte, error) {
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, errwrap.Wrapf("Error building request: {{err}}", err)
 	}
 
-	req.Header.Set("User-Agent", c.userAgent)
+	req.Header.Set("User-Agent", client.userAgent)
 
-	resp, err := c.realClient.Do(req)
+	resp, err := client.realClient.Do(req)
 	if err != nil {
 		return nil, errwrap.Wrapf("Error calling "+url+": {{err}}\n", err)
 	}
