@@ -3,6 +3,7 @@ package reddit
 import (
 	"github.com/stretchr/testify/assert"
 	"testing"
+	"time"
 )
 
 func TestUnmarshallOnePost(t *testing.T) {
@@ -16,7 +17,7 @@ func TestUnmarshallOnePost(t *testing.T) {
 							"thumbnail": "http://thumbnail1.jpg",
 							"permalink": "/r/perma1",
 							"url": "https://url1",
-							"created_utc": 1000000001.0
+							"created_utc": 1451703845.0
 						}
 					}
 				]
@@ -33,7 +34,7 @@ func TestUnmarshallOnePost(t *testing.T) {
 			assert.Equal(t, "http://thumbnail1.jpg", post.Thumbnail)
 			assert.Equal(t, "/r/perma1", post.Permalink)
 			assert.Equal(t, "https://url1", post.Url)
-			assert.Equal(t, 1000000001.0, post.Created)
+			assert.Equal(t, time.Date(2016, 1, 2, 3, 4, 5, 0, time.UTC), post.Created.Time)
 		}
 	}
 }

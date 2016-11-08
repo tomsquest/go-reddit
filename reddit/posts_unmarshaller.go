@@ -2,6 +2,7 @@ package reddit
 
 import (
 	"encoding/json"
+	"time"
 )
 
 func UnmarshallPosts(data []byte) ([]Post, error) {
@@ -36,5 +37,19 @@ type Post struct {
 	Permalink string
 	Url       string
 	Thumbnail string
-	Created   float64 `json:"created_utc"`
+	Created   PostTime `json:"created_utc"`
+}
+
+type PostTime struct {
+	time.Time
+}
+
+func (t *PostTime) UnmarshalJSON(b []byte) (err error) {
+	var unixTimestamp float64
+	err = json.Unmarshal(b, &unixTimestamp)
+	if err != nil {
+		return err
+	}
+	t.Time = time.Unix(int64(unixTimestamp), 0).UTC()
+	return
 }
