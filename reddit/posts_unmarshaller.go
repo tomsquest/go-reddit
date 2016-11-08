@@ -2,6 +2,7 @@ package reddit
 
 import (
 	"encoding/json"
+	"strconv"
 	"time"
 )
 
@@ -45,8 +46,7 @@ type PostTime struct {
 }
 
 func (t *PostTime) UnmarshalJSON(b []byte) (err error) {
-	var unixTimestamp float64
-	err = json.Unmarshal(b, &unixTimestamp)
+	unixTimestamp, err := strconv.ParseFloat(string(b), 64)
 	if err != nil {
 		return err
 	}
