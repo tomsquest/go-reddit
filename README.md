@@ -2,14 +2,14 @@
 
 ## Todo
 
-* Créer un `PostUnmarshaller`
+* Parse Post timestamp 
 
 ## Learn
 
 * [x] net/http
 * [x] fake http (simulate Reddit)
 * [ ] Concurrency
-* [ ] Logging
+* [x] Logging
 * [ ] Testing
 * [ ] Email
 * [ ] Templating
