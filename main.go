@@ -16,6 +16,6 @@ func main() {
 	}
 
 	for idx, post := range posts {
-		fmt.Printf("Post %2d - %v", idx, post.Title[:20])
+		fmt.Printf("Post %2d - %v\n", idx, post.Title)
 	}
 }

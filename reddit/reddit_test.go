@@ -7,7 +7,7 @@ import (
 )
 
 func TestGetTopPosts_GivenSomePosts(t *testing.T) {
-	client := New(WithFakeClient("https://www.reddit.com/r/some-sub", "{}"))
+	client := New(WithFakeClient("https://www.reddit.com/r/some-sub.json", "{}"))
 
 	posts, err := client.GetTopPosts("some-sub")
 
