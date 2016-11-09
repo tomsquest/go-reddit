@@ -6,7 +6,13 @@ import (
 	"time"
 )
 
-func UnmarshallPosts(data []byte) ([]Post, error) {
+type PostsUnmarshaller interface {
+	UnmarshallPosts(data []byte) ([]Post, error)
+}
+
+type postsUnmarshaller struct{}
+
+func (postsUnmarshaller) UnmarshallPosts(data []byte) ([]Post, error) {
 	var resp Response
 	err := json.Unmarshal(data, &resp)
 	if err != nil {
