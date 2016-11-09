@@ -41,6 +41,7 @@ type Post struct {
 	Created     PostTime `json:"created_utc"`
 	Ups         int
 	NumComments int `json:"num_comments"`
+	Stickied    bool
 }
 
 type PostTime struct {

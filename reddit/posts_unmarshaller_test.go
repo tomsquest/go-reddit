@@ -19,7 +19,8 @@ func TestUnmarshallOnePost(t *testing.T) {
 							"url": "https://url1",
 							"created_utc": 1451703845.0,
 							"ups": 123,
-							"num_comments": 345
+							"num_comments": 345,
+							"stickied": true
 						}
 					}
 				]
@@ -39,6 +40,7 @@ func TestUnmarshallOnePost(t *testing.T) {
 			assert.Equal(t, time.Date(2016, 1, 2, 3, 4, 5, 0, time.UTC), post.Created.Time)
 			assert.Equal(t, 123, post.Ups)
 			assert.Equal(t, 345, post.NumComments)
+			assert.Equal(t, true, post.Stickied)
 		}
 	}
 }
