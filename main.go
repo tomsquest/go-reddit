@@ -18,6 +18,7 @@ func main() {
 		log.Fatalf("Unable to get posts of subreddit %v: %v", subredditName, err)
 	}
 
+	fmt.Printf("Subreddit '%v', crawled at %v\n", subreddit.Name, subreddit.CrawlDate)
 	for idx, post := range subreddit.Posts() {
 		fmt.Printf("Post %2d - %v\n", idx, post.Title)
 	}

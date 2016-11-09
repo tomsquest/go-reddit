@@ -4,6 +4,7 @@ import (
 	"github.com/hashicorp/errwrap"
 	"github.com/mgutz/logxi/v1"
 	"github.com/tomsquest/go-reddit/http"
+	"time"
 )
 
 var logger log.Logger = log.New("reddit")
@@ -50,6 +51,6 @@ func (reddit *Reddit) GetTopPosts(subredditName string) (subreddit Subreddit, er
 		}
 	}
 
-	subreddit = NewSubreddit(subredditName, posts)
+	subreddit = NewSubreddit(subredditName, time.Now(), posts)
 	return
 }

@@ -1,12 +1,15 @@
 package reddit
 
+import "time"
+
 type Subreddit struct {
-	Name  string
-	posts []Post
+	Name      string
+	CrawlDate time.Time
+	posts     []Post
 }
 
-func NewSubreddit(name string, posts []Post) Subreddit {
-	return Subreddit{name, posts}
+func NewSubreddit(name string, crawlDate time.Time, posts []Post) Subreddit {
+	return Subreddit{name, crawlDate, posts}
 }
 
 func (sub Subreddit) Posts() []Post {
