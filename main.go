@@ -1,16 +1,19 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"github.com/tomsquest/go-reddit/reddit"
 	"log"
 )
 
 func main() {
-	subreddit := "gifs"
+	subreddit := flag.String("subreddit", "golang", "Subreddit to fetch")
+	flag.Parse()
+
 	client := reddit.New()
 
-	posts, err := client.GetTopPosts(subreddit)
+	posts, err := client.GetTopPosts(*subreddit)
 	if err != nil {
 		log.Fatalf("Unable to get posts: %v", err)
 	}
