@@ -26,20 +26,19 @@ func New(opts ...option) Reddit {
 	return reddit
 }
 
-func (reddit *Reddit) GetTopPosts(subreddit string) ([]Post, error) {
+func (reddit *Reddit) GetTopPosts(subredditName string) (subreddit Subreddit, err error) {
+	logger.Info("Getting top posts", "subreddit", subredditName)
 
-	logger.Info("Getting top posts")
-
-	url := "https://www.reddit.com/r/" + subreddit + ".json" + "?t=week"
+	url := "https://www.reddit.com/r/" + subredditName + ".json" + "?t=week"
 
 	data, err := reddit.client.Get(url)
 	if err != nil {
-		return nil, errwrap.Wrapf("Unable to get posts of subreddit '"+subreddit+"': {{err}}", err)
+		return subreddit, errwrap.Wrapf("Unable to get posts of subreddit '"+subredditName+"': {{err}}", err)
 	}
 
 	posts, err := UnmarshallPosts(data)
 	if err != nil {
-		return nil, errwrap.Wrapf("Unable to unmarshall posts: {{err}}", err)
+		return subreddit, errwrap.Wrapf("Unable to unmarshall posts: {{err}}", err)
 	}
 
 	if logger.IsDebug() {
@@ -49,5 +48,6 @@ func (reddit *Reddit) GetTopPosts(subreddit string) ([]Post, error) {
 		}
 	}
 
-	return posts, nil
+	subreddit = NewSubreddit(subredditName, posts)
+	return
 }

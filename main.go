@@ -8,17 +8,17 @@ import (
 )
 
 func main() {
-	subreddit := flag.String("subreddit", "golang", "Subreddit to fetch")
+	subredditName := flag.String("subreddit", "golang", "Subreddit to fetch")
 	flag.Parse()
 
 	client := reddit.New()
 
-	posts, err := client.GetTopPosts(*subreddit)
+	subreddit, err := client.GetTopPosts(*subredditName)
 	if err != nil {
-		log.Fatalf("Unable to get posts: %v", err)
+		log.Fatalf("Unable to get posts of subreddit %v: %v", subredditName, err)
 	}
 
-	for idx, post := range posts {
+	for idx, post := range subreddit.Posts() {
 		fmt.Printf("Post %2d - %v\n", idx, post.Title)
 	}
 }

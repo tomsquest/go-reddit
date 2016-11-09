@@ -6,13 +6,13 @@ import (
 	"testing"
 )
 
-func TestGetTopPosts_GivenSomePosts(t *testing.T) {
+func TestGetTopPosts(t *testing.T) {
 	client := New(WithFakeClient("https://www.reddit.com/r/some-sub.json?t=week", "{}"))
 
-	posts, err := client.GetTopPosts("some-sub")
+	subreddit, err := client.GetTopPosts("some-sub")
 
 	if assert.NoError(t, err) {
-		assert.Len(t, posts, 0)
+		assert.Len(t, subreddit.Posts(), 0)
 	}
 }
 

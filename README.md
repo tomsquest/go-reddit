@@ -3,10 +3,8 @@
 ## Todo
 
 * Virer les posts "Rules" `stickied`
-* Garder Json `ups`, `num_comments`
-* Param "Subreddit" en entrée
-* Prendre N subreddits en entrée
 * Struct Subreddit contenant son titre, date de fetch, liste des Posts
+* Prendre N subreddits en entrée
 
 ## Learn
 
