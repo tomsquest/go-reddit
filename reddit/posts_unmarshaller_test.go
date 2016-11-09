@@ -39,7 +39,7 @@ func TestUnmarshallOnePost(t *testing.T) {
 	}
 }
 
-func TestUnmarshallTwoPost(t *testing.T) {
+func TestUnmarshallTwoPosts(t *testing.T) {
 	data := []byte(`
 		{
 			"data": {
