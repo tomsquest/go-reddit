@@ -13,7 +13,7 @@ type PostsUnmarshaller interface {
 type postsUnmarshaller struct{}
 
 func (postsUnmarshaller) UnmarshallPosts(data []byte) ([]Post, error) {
-	var resp Response
+	var resp response
 	err := json.Unmarshal(data, &resp)
 	if err != nil {
 		return nil, err
@@ -27,15 +27,15 @@ func (postsUnmarshaller) UnmarshallPosts(data []byte) ([]Post, error) {
 	return posts, nil
 }
 
-type Response struct {
-	Data ResponseData
+type response struct {
+	Data responseData
 }
 
-type ResponseData struct {
-	Children []PostData
+type responseData struct {
+	Children []postData
 }
 
-type PostData struct {
+type postData struct {
 	Post Post `json:"data"`
 }
 
