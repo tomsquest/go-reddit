@@ -30,7 +30,7 @@ func (reddit *Reddit) GetTopPosts(subreddit string) ([]Post, error) {
 
 	logger.Info("Getting top posts")
 
-	url := "https://www.reddit.com/r/" + subreddit + ".json"
+	url := "https://www.reddit.com/r/" + subreddit + ".json" + "?t=week"
 
 	data, err := reddit.client.Get(url)
 	if err != nil {
