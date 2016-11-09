@@ -8,7 +8,7 @@ import (
 )
 
 func TestGetTopPosts(t *testing.T) {
-	client := New(
+	client := NewClient(
 		WithFakeClient("https://www.reddit.com/r/some-sub.json?t=week", "{}", nil),
 		WithFakePostsUnmarshaller([]byte("{}"), []Post{}, nil),
 	)
@@ -21,7 +21,7 @@ func TestGetTopPosts(t *testing.T) {
 }
 
 func TestGetTopPosts_GivenAHttpError(t *testing.T) {
-	client := New(
+	client := NewClient(
 		WithFakeClient("", "", errors.New("http error")),
 	)
 
@@ -31,7 +31,7 @@ func TestGetTopPosts_GivenAHttpError(t *testing.T) {
 }
 
 func TestGetTopPosts_GivenAnUnmarshallingError(t *testing.T) {
-	client := New(
+	client := NewClient(
 		WithFakeClient("https://www.reddit.com/r/some-sub.json?t=week", "{}", nil),
 		WithFakePostsUnmarshaller(nil, nil, errors.New("unmarhall error")),
 	)

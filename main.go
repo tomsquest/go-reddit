@@ -11,7 +11,7 @@ func main() {
 	subredditName := flag.String("subreddit", "golang", "Subreddit to fetch")
 	flag.Parse()
 
-	client := reddit.New()
+	client := reddit.NewClient()
 
 	subreddit, err := client.GetTopPosts(*subredditName)
 	if err != nil {

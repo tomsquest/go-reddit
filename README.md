@@ -2,8 +2,6 @@
 
 ## Todo
 
-* Renommer `reddit.New` en `reddit.NewReddit`
-* `Reddit` doit avoir une dépendance vers la func PostUnmarshaller
 * Concurrency: Prendre N subreddits en entrée
 * `UserAgent` configurable
 
@@ -13,6 +11,7 @@
 * [x] fake http (simulate Reddit)
 * [x] Logging
 * [x] Testing
+* [ ] Mocking
 * [ ] Concurrency
 * [ ] Email
 * [ ] Templating
@@ -21,6 +20,7 @@
 
 ### Technical
 
+* Fwk de Mock
 * Dependency injection
 * Switch to `fasthttp`: https://godoc.org/github.com/valyala/fasthttp
 
