@@ -34,11 +34,13 @@ type PostData struct {
 }
 
 type Post struct {
-	Title     string
-	Permalink string
-	Url       string
-	Thumbnail string
-	Created   PostTime `json:"created_utc"`
+	Title       string
+	Permalink   string
+	Url         string
+	Thumbnail   string
+	Created     PostTime `json:"created_utc"`
+	Ups         int
+	NumComments int `json:"num_comments"`
 }
 
 type PostTime struct {
