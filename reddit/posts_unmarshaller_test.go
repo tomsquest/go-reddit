@@ -46,20 +46,12 @@ func TestUnmarshallTwoPosts(t *testing.T) {
 				"children": [
 					{
 						"data": {
-							"thumbnail": "http://thumbnail1.jpg",
-							"permalink": "/r/perma1",
-							"url": "https://url1",
-							"title": "title1",
-							"created_utc": 1000000001.0
+							"title": "title1"
 						}
 					},
 					{
 						"data": {
-							"thumbnail": "http://thumbnail2.jpg",
-							"permalink": "/r/perma2",
-							"url": "https://url2",
-							"title": "title2",
-							"created_utc": 1000000002.0
+							"title": "title2"
 						}
 					}
 				]
