@@ -4,6 +4,8 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 
 ## Todo
 
+* Titre cliquable dans la template
+* Texte cliquable
 * Date du crawl en date+time (template)
 * Param "fakeReddit" pour ne pas appeler reddit
 * Config SMTP
