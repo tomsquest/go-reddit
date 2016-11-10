@@ -41,7 +41,6 @@ type postData struct {
 
 type Post struct {
 	Title       string
-	Permalink   string
 	Url         string
 	Thumbnail   string
 	Created     PostTime `json:"created_utc"`
