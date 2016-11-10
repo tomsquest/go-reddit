@@ -161,9 +161,11 @@
                                                                     <tr>
                                                                         <td align="left" valign="top"
                                                                             class="imageContent">
-                                                                            <img src="http://placekitten.com/g/400/400"
-                                                                                 width="200" class="flexibleImage"
-                                                                                 style="max-width:200px;"/>
+                                                                            <a href="{{ .Url}}">
+                                                                                <img src="{{ .Thumbnail}}"
+                                                                                     width="200" class="flexibleImage"
+                                                                                     style="max-width:200px;"/>
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -174,9 +176,11 @@
                                                                         <td valign="top" class="textContent">
                                                                             <h3>{{.Title | title}}</h3>
                                                                             <br/>
-                                                                            Ups: <strong>{{.Ups}}</strong>
+                                                                            Ups: <b>{{.Ups}}</b>
                                                                             <br/>
-                                                                            Comments: <strong>{{.NumComments}}</strong>
+                                                                            Comments: <b>{{.NumComments}}</b>
+                                                                            <br/>
+                                                                            Created: {{.Created}}
                                                                         </td>
                                                                     </tr>
                                                                 </table>
