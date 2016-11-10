@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/tomsquest/go-reddit/delivery"
 	"github.com/tomsquest/go-reddit/reddit"
 	"log"
 )
@@ -18,8 +19,12 @@ func main() {
 		log.Fatalf("Unable to get posts of subreddit %v: %v", subredditName, err)
 	}
 
-	fmt.Printf("Subreddit '%v', crawled at %v\n", subreddit.Name, subreddit.CrawlDate)
-	for idx, post := range subreddit.Posts() {
-		fmt.Printf("Post %2d - %v\n", idx, post.Title)
+	fmt.Printf("Subreddit '%v', crawled at %v: %v posts fetched\n", subreddit.Name, subreddit.CrawlDate, len(subreddit.Posts()))
+
+	sender := delivery.NewSmtpSender()
+	if err = sender.Send(subreddit); err != nil {
+		log.Fatalf("Unable to send email: %v", err)
 	}
+
+	fmt.Println("Mail sent")
 }

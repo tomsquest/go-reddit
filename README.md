@@ -1,9 +1,10 @@
 # Go-Reddit by email
 
+Un binaire simple qui m'envoie par email la liste des Tops des subreddits configurés, toutes les semaines.
+
 ## Todo
 
 * Concurrency: Prendre N subreddits en entrée
-* Garder une date de crawl (dans `Subreddit`)
 * `UserAgent` configurable
 
 ## Learn
@@ -12,6 +13,7 @@
 * [x] fake http (simulate Reddit)
 * [x] Logging
 * [x] Testing
+* [ ] Config file (Viper ?)
 * [ ] Mocking
 * [ ] Concurrency
 * [ ] Email
