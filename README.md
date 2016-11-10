@@ -4,8 +4,11 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 
 ## Todo
 
+* Date du crawl en date+time (template)
+* Param "fakeReddit" pour ne pas appeler reddit
+* Config SMTP
+* Config `UserAgent`
 * Concurrency: Prendre N subreddits en entrée
-* `UserAgent` configurable
 
 ## Learn
 
@@ -44,3 +47,7 @@ func GetEntity(r *http.Request, v Entity) error {
 * Limiter le nombre de posts (5, 10...) ou plus (possible ?)
 * User/Password...
 
+
+## Thanks
+
+* HTML template courtesy of Mailchimp: https://github.com/mailchimp/email-blueprints

@@ -2,29 +2,39 @@ package main
 
 import (
 	"flag"
-	"fmt"
-	"github.com/tomsquest/go-reddit/delivery"
+	"github.com/tomsquest/go-reddit/output"
 	"github.com/tomsquest/go-reddit/reddit"
 	"log"
 )
 
+//go:generate go-bindata -nomemcopy -o assets/assets.go -pkg assets assets
+
 func main() {
-	subredditName := flag.String("subreddit", "golang", "Subreddit to fetch")
+	subredditNameParam := flag.String("subreddit", "golang", "Subreddit to fetch")
+	outputParam := flag.String("output", "console", "Select the output: console, mail")
 	flag.Parse()
 
 	client := reddit.NewClient()
 
-	subreddit, err := client.GetTopPosts(*subredditName)
+	subreddit, err := client.GetTopPosts(*subredditNameParam)
 	if err != nil {
-		log.Fatalf("Unable to get posts of subreddit %v: %v", subredditName, err)
+		log.Fatalf("Unable to get posts of subreddit %v: %v", subredditNameParam, err)
 	}
 
-	fmt.Printf("Subreddit '%v', crawled at %v: %v posts fetched\n", subreddit.Name, subreddit.CrawlDate, len(subreddit.Posts()))
+	//subreddit := reddit.NewSubreddit(*subredditNameParam, time.Now(), []reddit.Post{
+	//	{Title:"Title 1"},
+	//	{Title:"Title 2"},
+	//})
 
-	sender := delivery.NewSmtpSender()
-	if err = sender.Send(subreddit); err != nil {
-		log.Fatalf("Unable to send email: %v", err)
+	var selectedOutput output.Output
+	switch *outputParam {
+	case "mail":
+		selectedOutput = output.SmtpOutput{}
+	default:
+		selectedOutput = output.Console{}
 	}
 
-	fmt.Println("Mail sent")
+	if err := selectedOutput.Out(subreddit); err != nil {
+		log.Fatalf("Unable to send : %v", err)
+	}
 }
