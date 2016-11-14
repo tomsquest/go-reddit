@@ -42,11 +42,20 @@ type postData struct {
 type Post struct {
 	Title       string
 	Url         string
+	Permalink   Permalink
 	Thumbnail   string
 	Created     PostTime `json:"created_utc"`
 	Ups         int
 	NumComments int `json:"num_comments"`
 	Stickied    bool
+}
+
+type Permalink string
+
+func (p *Permalink) UnmarshalJSON(b []byte) (err error) {
+	path, err := strconv.Unquote(string(b))
+	*p = Permalink("https://www.reddit.com" + path)
+	return
 }
 
 type PostTime struct {

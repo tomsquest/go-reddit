@@ -16,6 +16,7 @@ func TestUnmarshallOnePost(t *testing.T) {
 							"title": "title1",
 							"thumbnail": "http://thumbnail1.jpg",
 							"url": "https://url1",
+							"permalink": "/r/sub1/comments/1",
 							"created_utc": 1451703845.0,
 							"ups": 123,
 							"num_comments": 345,
@@ -35,6 +36,7 @@ func TestUnmarshallOnePost(t *testing.T) {
 			assert.Equal(t, "title1", post.Title)
 			assert.Equal(t, "http://thumbnail1.jpg", post.Thumbnail)
 			assert.Equal(t, "https://url1", post.Url)
+			assert.Equal(t, Permalink("https://www.reddit.com/r/sub1/comments/1"), post.Permalink)
 			assert.Equal(t, time.Date(2016, 1, 2, 3, 4, 5, 0, time.UTC), post.Created.Time)
 			assert.Equal(t, 123, post.Ups)
 			assert.Equal(t, 345, post.NumComments)
