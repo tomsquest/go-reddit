@@ -185,9 +185,17 @@
                                                                         <td align="left" valign="top"
                                                                             class="imageContent">
                                                                             <a href="{{ .Url}}">
+                                                                                {{ if .Thumbnail }}
                                                                                 <img src="{{ .Thumbnail}}"
                                                                                      width="200" class="flexibleImage"
-                                                                                     style="max-width:200px;"/>
+                                                                                     style="max-width:200px;"
+                                                                                     alt="Thumbnail"/>
+                                                                                {{else}}
+                                                                                <img src="cid:reddit_no_thumbnail.png"
+                                                                                     width="200" class="flexibleImage"
+                                                                                     style="max-width:200px;"
+                                                                                     alt="No thumbnail"/>
+                                                                                {{end}}
                                                                             </a>
                                                                         </td>
                                                                     </tr>

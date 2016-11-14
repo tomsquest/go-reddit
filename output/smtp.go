@@ -30,6 +30,11 @@ func (SmtpOutput) Out(subreddit reddit.Subreddit) error {
 		w.Write(data)
 		return err
 	}))
+	mail.Embed("reddit_no_thumbnail.png", gomail.SetCopyFunc(func(w io.Writer) error {
+		data, err := assets.Asset("assets/reddit_no_thumbnail.png")
+		w.Write(data)
+		return err
+	}))
 
 	log.Info("Sending email", "subject", mail.GetHeader("Subject"))
 
