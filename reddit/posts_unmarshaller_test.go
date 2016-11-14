@@ -84,3 +84,25 @@ func TestUnmarshallNoPost(t *testing.T) {
 		assert.Len(t, posts, 0)
 	}
 }
+
+func TestUnmarshallWithNoThumbnail(t *testing.T) {
+	data := []byte(`
+		{
+			"data": {
+				"children": [
+					{
+						"data": {
+							"thumbnail": "self"
+						}
+					}
+				]
+			}
+		}
+	`)
+
+	posts, err := JsonPostUnmarshaller{}.UnmarshallPosts(data)
+
+	if assert.NoError(t, err) {
+		assert.Equal(t, "", posts[0].Thumbnail)
+	}
+}

@@ -3,6 +3,7 @@ package reddit
 import (
 	"encoding/json"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -52,11 +53,16 @@ type rawPost struct {
 }
 
 func (raw rawPost) ToPost() Post {
+	thumbnail := raw.Thumbnail
+	if !strings.HasPrefix(raw.Thumbnail, "http") {
+		thumbnail = ""
+	}
+
 	return Post{
 		Title:       raw.Title,
 		Url:         raw.Url,
 		Permalink:   string(raw.Permalink),
-		Thumbnail:   raw.Thumbnail,
+		Thumbnail:   thumbnail,
 		Created:     time.Time(raw.Created),
 		Ups:         raw.Ups,
 		NumComments: raw.NumComments,
