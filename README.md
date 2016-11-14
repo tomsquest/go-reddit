@@ -10,7 +10,6 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 * Github: Readme, badges, Travis, Cov (?), Vet (?)
 
 * Param "fakeReddit" pour ne pas appeler reddit
-* [Template] Ajout du permalink (lien vers Reddit)
 * [Template] CSS Inline (Douceur) ou à la mano
 * [Template] Logo reddit (header + footer, le même ?)
 * Date du crawl en date+time (template)
@@ -52,6 +51,7 @@ func GetEntity(r *http.Request, v Entity) error {
 * Param pour prendre les tops du jours, de la semaine, du mois...
 * Limiter le nombre de posts (5, 10...) ou plus (possible ?)
 * User/Password...
+* Alternative text au mail html
 
 
 ## Thanks
