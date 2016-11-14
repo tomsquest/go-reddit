@@ -13,7 +13,7 @@ func TestTemplatize_singlePost(t *testing.T) {
 		Url:         "http://url1",
 		Permalink:   "http://perma1",
 		Thumbnail:   "http://thumb1",
-		Created:     reddit.PostTime{Time: time.Date(2000, 1, 2, 3, 4, 5, 0, time.UTC)},
+		Created:     time.Date(2000, 1, 2, 3, 4, 5, 0, time.UTC),
 		Ups:         100,
 		NumComments: 101,
 	}})

@@ -5,7 +5,8 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 ## Todo
 
 * Gérer les posts sans thumbnails
-* Config: SMTP, `UserAgent`
+* Supprimer le padding au dessus des titres des posts
+* Configuration par fichier: SMTP, `UserAgent`
 * Simplifier les loggers pour ne pas avoir N packages
 
 ## Learn
@@ -24,7 +25,6 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 
 ### Technical
 
-* Concurrency: Prendre N subreddits en entrée
 * Fwk de Mock
 * Dependency injection
 * Switch to `fasthttp`: https://godoc.org/github.com/valyala/fasthttp
@@ -42,6 +42,7 @@ func GetEntity(r *http.Request, v Entity) error {
 
 ### Functional
 
+* Concurrency: Prendre N subreddits en entrée
 * Github: Readme, badges, Travis, Cov (?), Vet (?)
 * Param pour prendre les tops du jours, de la semaine, du mois...
 * Limiter le nombre de posts (5, 10...) ou plus (possible ?)

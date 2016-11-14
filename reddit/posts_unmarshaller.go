@@ -21,7 +21,8 @@ func (JsonPostUnmarshaller) UnmarshallPosts(data []byte) ([]Post, error) {
 
 	posts := make([]Post, 0, len(resp.Data.Children))
 	for _, child := range resp.Data.Children {
-		posts = append(posts, child.Post)
+		post := child.RawPost.ToPost()
+		posts = append(posts, post)
 	}
 
 	return posts, nil
@@ -36,37 +37,59 @@ type responseData struct {
 }
 
 type postData struct {
-	Post Post `json:"data"`
+	RawPost rawPost `json:"data"`
 }
 
-type Post struct {
+type rawPost struct {
 	Title       string
 	Url         string
-	Permalink   Permalink
+	Permalink   permalink
 	Thumbnail   string
-	Created     PostTime `json:"created_utc"`
+	Created     postTime `json:"created_utc"`
 	Ups         int
 	NumComments int `json:"num_comments"`
 	Stickied    bool
 }
 
-type Permalink string
+func (raw rawPost) ToPost() Post {
+	return Post{
+		Title:       raw.Title,
+		Url:         raw.Url,
+		Permalink:   string(raw.Permalink),
+		Thumbnail:   raw.Thumbnail,
+		Created:     time.Time(raw.Created),
+		Ups:         raw.Ups,
+		NumComments: raw.NumComments,
+		Stickied:    raw.Stickied,
+	}
+}
 
-func (p *Permalink) UnmarshalJSON(b []byte) (err error) {
+type Post struct {
+	Title       string
+	Url         string
+	Permalink   string
+	Thumbnail   string
+	Created     time.Time
+	Ups         int
+	NumComments int
+	Stickied    bool
+}
+
+type permalink string
+
+func (p *permalink) UnmarshalJSON(b []byte) (err error) {
 	path, err := strconv.Unquote(string(b))
-	*p = Permalink("https://www.reddit.com" + path)
+	*p = permalink("https://www.reddit.com" + path)
 	return
 }
 
-type PostTime struct {
-	time.Time
-}
+type postTime time.Time
 
-func (t *PostTime) UnmarshalJSON(b []byte) (err error) {
+func (t *postTime) UnmarshalJSON(b []byte) (err error) {
 	unixTimestamp, err := strconv.ParseFloat(string(b), 64)
 	if err != nil {
 		return err
 	}
-	t.Time = time.Unix(int64(unixTimestamp), 0).UTC()
+	*t = postTime(time.Unix(int64(unixTimestamp), 0).UTC())
 	return
 }

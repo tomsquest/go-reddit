@@ -34,16 +34,6 @@ func templatize(subreddit reddit.Subreddit) (string, error) {
 	return buf.String(), nil
 }
 
-func toDate(date interface{}) string {
-	var t time.Time
-	switch date := date.(type) {
-	case time.Time:
-		t = date
-	case reddit.PostTime:
-		t = date.Time
-	default:
-		t = time.Now()
-	}
-
-	return t.Format("2006-01-02 15:04:05")
+func toDate(time time.Time) string {
+	return time.Format("2006-01-02 15:04:05")
 }
