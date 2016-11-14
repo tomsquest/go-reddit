@@ -1,0 +1,4097 @@
+{
+  "kind": "Listing",
+  "data": {
+    "modhash": "t4uo7zr7jcee1fe0d9835a6898d9c72df2b361a6f1d486aa88",
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "tiobe.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5csvh3",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "wh1t3_w01f",
+          "media": null,
+          "name": "t3_5csvh3",
+          "score": 63,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5csvh3/popularity_of_go_passed_2_for_the_first_time/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479109488.0,
+          "url": "http://www.tiobe.com/tiobe-index/go/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Popularity of Go - passed 2% for the first time!",
+          "created_utc": 1479080688.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 15,
+          "visited": false,
+          "num_reports": null,
+          "ups": 63
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "timeferret.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cvxmz",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "vendakka",
+          "media": null,
+          "name": "t3_5cvxmz",
+          "score": 2,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": true,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cvxmz/lint_run_linters_from_go_test/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479158934.0,
+          "url": "https://www.timeferret.com/lint",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "lint - Run linters from go test",
+          "created_utc": 1479130134.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 1,
+          "visited": false,
+          "num_reports": null,
+          "ups": 2
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "self.golang",
+          "subreddit": "golang",
+          "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;Rebuilding &lt;a href=\"https://packages.debian.org/jessie-backports/golang-1.6-src\"&gt;golang-1.6-src/golang-1.6-go&lt;/a&gt; for SteamOS, and I have many of the prereqs already built (go has a lot of individual packages for, reasons?). I am at a rock and a hard place. The build requires golang-src/golang-go, which I have, but those in turn depend on golang-1.6-src/golang-1.6-go, which I am building. I don&amp;#39;t see in debian/rules or control where a binary-arch or build profile line would bootstrap this process (which I have done with Qt5 in the past). A catch-22, by what I can see. Is there any way to build this using sbuild/pbuilder without just installing those on a local system and building without pbuilder/sbuild?&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt; golang-src : Depends: golang-1.6-src which is a virtual package.\n golang-go : Depends: golang-1.6-go which is a virtual package.\n&lt;/code&gt;&lt;/pre&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\"http://packages.libregeek.org/steamos-tools/pool/main/g/\"&gt;existing packages&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"http://sprunge.us/EPPR\"&gt;build log&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+          "selftext": "Rebuilding [golang-1.6-src/golang-1.6-go](https://packages.debian.org/jessie-backports/golang-1.6-src) for SteamOS, and I have many of the prereqs already built (go has a lot of individual packages for, reasons?). I am at a rock and a hard place. The build requires golang-src/golang-go, which I have, but those in turn depend on golang-1.6-src/golang-1.6-go, which I am building. I don't see in debian/rules or control where a binary-arch or build profile line would bootstrap this process (which I have done with Qt5 in the past). A catch-22, by what I can see. Is there any way to build this using sbuild/pbuilder without just installing those on a local system and building without pbuilder/sbuild?\n\n     golang-src : Depends: golang-1.6-src which is a virtual package.\n     golang-go : Depends: golang-1.6-go which is a virtual package.\n\n* [existing packages](http://packages.libregeek.org/steamos-tools/pool/main/g/)\n* [build log](http://sprunge.us/EPPR)",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cw08g",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "ProfessorKaos64",
+          "media": null,
+          "name": "t3_5cw08g",
+          "score": 1,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "self",
+          "subreddit_id": "t5_2rc7j",
+          "edited": 1479132122.0,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": true,
+          "hide_score": true,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cw08g/how_to_build_golangsrc_when_it_depends_on/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479159929.0,
+          "url": "https://www.reddit.com/r/golang/comments/5cw08g/how_to_build_golangsrc_when_it_depends_on/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "How to build golang-src when it depends on golang-1.6-src (which depends on golang-src) \u00af\\_(\u30c4)_/\u00af",
+          "created_utc": 1479131129.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 1
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cvq18",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "sunfmin",
+          "media": null,
+          "name": "t3_5cvq18",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/TqSWYzow09r3wf28HSyWJamwnqcniKD2roevUkBXEww.jpg?s=d0782c73d09f11cfc7f9ce4f04fbf897",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/TqSWYzow09r3wf28HSyWJamwnqcniKD2roevUkBXEww.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=da938fd7ac2a47c085f19aa290de212f",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/TqSWYzow09r3wf28HSyWJamwnqcniKD2roevUkBXEww.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=015af9f5fd54846d1ca25ea0880ab253",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/TqSWYzow09r3wf28HSyWJamwnqcniKD2roevUkBXEww.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=3d2bd4e3749c4bbe98cc2d9df85729e8",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "YeRuhoTlswQvWwnlG2bOZOxxXlOf0BnCkdDbcvFrMGM"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/5gQJIIOP7LaoR55O6y_IczqeLy6TNwVdglT3AVI3w9A.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cvq18/convert_go_func_to_httphandlefunc_that_handle/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479155861.0,
+          "url": "https://github.com/theplant/jsonhandlerfunc",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Convert Go func to http.HandleFunc that handle json request and response json",
+          "created_utc": 1479127061.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "calhoun.io",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5crroh",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "joncalhoun",
+          "media": null,
+          "name": "t3_5crroh",
+          "score": 15,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/d-RIbKk9x0ro4KiQh0pAtSTk-wpzWy7gSLwrRvQK_qA.jpg?s=f04cef55c721255676b9d30a2811167b",
+                  "width": 4338,
+                  "height": 1962
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/d-RIbKk9x0ro4KiQh0pAtSTk-wpzWy7gSLwrRvQK_qA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=2a06abf6ced9bffc3c3099050f21e94f",
+                    "width": 108,
+                    "height": 48
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/d-RIbKk9x0ro4KiQh0pAtSTk-wpzWy7gSLwrRvQK_qA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=8ea4a12cea2a0c59627c8b1fe88678e3",
+                    "width": 216,
+                    "height": 97
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/d-RIbKk9x0ro4KiQh0pAtSTk-wpzWy7gSLwrRvQK_qA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=da36a94a672c1addb9193477df39d583",
+                    "width": 320,
+                    "height": 144
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/d-RIbKk9x0ro4KiQh0pAtSTk-wpzWy7gSLwrRvQK_qA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=a9ec158c66e2bcc04681e5b892312235",
+                    "width": 640,
+                    "height": 289
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/d-RIbKk9x0ro4KiQh0pAtSTk-wpzWy7gSLwrRvQK_qA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=ea0290fcfd6804087512130faf75b388",
+                    "width": 960,
+                    "height": 434
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/d-RIbKk9x0ro4KiQh0pAtSTk-wpzWy7gSLwrRvQK_qA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=15e76aa5e0b66fbf5c80b3ad598c9ad4",
+                    "width": 1080,
+                    "height": 488
+                  }
+                ],
+                "variants": {},
+                "id": "WKCymIb5hbKO_qfCRzmPpfgwnjc7FriUeoVWn4NfP5U"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/QNZgzWGily4J5CZGgjstlaWuemD8e5LUxzb5EAbrTBE.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5crroh/connecting_to_a_postgresql_database_with_gos/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479096478.0,
+          "url": "http://www.calhoun.io/connecting-to-a-postgresql-database-with-gos-database-sql-package/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Connecting to a PostgreSQL database with Go's database/sql package",
+          "created_utc": 1479067678.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 14,
+          "visited": false,
+          "num_reports": null,
+          "ups": 15
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "tapirgames.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5ctnxa",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "alasijia",
+          "media": null,
+          "name": "t3_5ctnxa",
+          "score": 5,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/6t2LZqys-Uhy0N82Uz03WXrjv1rLfIX3sFQBDKn9GF4.jpg?s=0c43a3a6f3f4db9c182c29a030553620",
+                  "width": 100,
+                  "height": 100
+                },
+                "resolutions": [],
+                "variants": {},
+                "id": "G82cwtaolWdbrNOUPXadahy3TxuQwKn9NU1BO_QsFKI"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/RlsPB8rjb2ZsKrlmDasba2CrCTLDFJK_U6UkCpckD4E.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5ctnxa/slice_comparison_in_golang/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479119723.0,
+          "url": "http://www.tapirgames.com/blog/golang-slice-comparison",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Slice Comparison in Golang",
+          "created_utc": 1479090923.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 8,
+          "visited": false,
+          "num_reports": null,
+          "ups": 5
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cunto",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "Dataman_",
+          "media": null,
+          "name": "t3_5cunto",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/4Jz8Bwu4GA57lwMwwlNEAtdcYFfi9iVRwNzDmpEzSvE.jpg?s=937d60f1307dc8f07df4515e1120590c",
+                  "width": 175,
+                  "height": 175
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/4Jz8Bwu4GA57lwMwwlNEAtdcYFfi9iVRwNzDmpEzSvE.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=4515a1c045e9b3f3798f89b9185308d9",
+                    "width": 108,
+                    "height": 108
+                  }
+                ],
+                "variants": {},
+                "id": "69b8eXXGTeWAMoZEET8WCSZ9SYeHoARgYlbe2g8Vtvs"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/02WbPPOXpJO4n6m9eXnSlrBxRE1dibctN68lE4n5AT8.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cunto/how_to_manage_my_docker_images_with_crane_builtin/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479134749.0,
+          "url": "https://github.com/Dataman-Cloud/crane/blob/guide/doc/userguide/how-to-manage-my-images-over-built-in-registry-on-crane.md",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "How to manage my docker images with Crane built-in registry",
+          "created_utc": 1479105949.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "jonathanmh.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cr8aw",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "jonathanmh",
+          "media": null,
+          "name": "t3_5cr8aw",
+          "score": 3,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/J7u8MB5eD_T8MgTPOTda2F1TLR8ffyi_HZLFss0qm6Q.jpg?s=ff73f7d73a87fa155598d19c8e67fb15",
+                  "width": 751,
+                  "height": 487
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/J7u8MB5eD_T8MgTPOTda2F1TLR8ffyi_HZLFss0qm6Q.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=afa00130132a6e41248fc1aefcac8065",
+                    "width": 108,
+                    "height": 70
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/J7u8MB5eD_T8MgTPOTda2F1TLR8ffyi_HZLFss0qm6Q.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=125447f1ecc96deb177cd181c96af5ab",
+                    "width": 216,
+                    "height": 140
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/J7u8MB5eD_T8MgTPOTda2F1TLR8ffyi_HZLFss0qm6Q.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=e665158be0f44e17b04d8e91991adc8d",
+                    "width": 320,
+                    "height": 207
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/J7u8MB5eD_T8MgTPOTda2F1TLR8ffyi_HZLFss0qm6Q.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=ca4e610cfcbcafb682c19d9af154c15c",
+                    "width": 640,
+                    "height": 415
+                  }
+                ],
+                "variants": {},
+                "id": "fYJtG1V17hwcPnovh3CsRf1sQOZbI4axC7hq9NFzg1I"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/fZj7MWnQ6-TlFVPLDIIsrwe5eVJSvEjtM7h2JH2D2o4.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cr8aw/tracing_or_preventing_http_redirects_in_golang/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479090283.0,
+          "url": "http://jonathanmh.com/tracing-preventing-http-redirects-golang/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Tracing or Preventing HTTP Redirects in Golang (for beginners)",
+          "created_utc": 1479061483.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 3
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "idiomaticgo.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cos3x",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "dgryski",
+          "media": null,
+          "name": "t3_5cos3x",
+          "score": 22,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cos3x/accept_interfaces_return_structs/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479047200.0,
+          "url": "http://idiomaticgo.com/post/best-practice/accept-interfaces-return-structs/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Accept interfaces return structs",
+          "created_utc": 1479018400.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 26,
+          "visited": false,
+          "num_reports": null,
+          "ups": 22
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "agiratech.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cpx2j",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "AgiraTechnologies",
+          "media": null,
+          "name": "t3_5cpx2j",
+          "score": 3,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/RLSDYEnw2LTwU51SwNMsb0CfbNAFjANIkREyC9bzEt0.jpg?s=6811fbf8912f52487a9358b83cafef4e",
+                  "width": 699,
+                  "height": 200
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/RLSDYEnw2LTwU51SwNMsb0CfbNAFjANIkREyC9bzEt0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=35444759e91b860039c3edd7b1d451fb",
+                    "width": 108,
+                    "height": 30
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/RLSDYEnw2LTwU51SwNMsb0CfbNAFjANIkREyC9bzEt0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=80dd23cdcc170e8c38cc7c39fdf2c653",
+                    "width": 216,
+                    "height": 61
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/RLSDYEnw2LTwU51SwNMsb0CfbNAFjANIkREyC9bzEt0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=fc884b2c0d4e499c95ba251d8719e956",
+                    "width": 320,
+                    "height": 91
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/RLSDYEnw2LTwU51SwNMsb0CfbNAFjANIkREyC9bzEt0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=971bdb2b01372e0aee7d27d57a12a609",
+                    "width": 640,
+                    "height": 183
+                  }
+                ],
+                "variants": {},
+                "id": "9tfwNU6mikpvbC2q7y4tCSeoBoBTEXzyrQ4sEGyaFH4"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/kSiP4U28XRouNARtzSZLKyzt6VvD5W_R_XwLdtqELR8.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cpx2j/message_queues_in_golang_via_rabbitmq/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479072361.0,
+          "url": "http://www.agiratech.com/message-queues-golang-rabbitmq/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Message Queues in Golang Via RabbitMQ",
+          "created_utc": 1479043561.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 5,
+          "visited": false,
+          "num_reports": null,
+          "ups": 3
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "idea.popcount.org",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cmxd0",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "shovelpost",
+          "media": null,
+          "name": "t3_5cmxd0",
+          "score": 25,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cmxd0/a_brief_history_of_select2/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479019497.0,
+          "url": "https://idea.popcount.org/2016-11-01-a-brief-history-of-select2/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "A brief history of select(2)",
+          "created_utc": 1478990697.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 1,
+          "visited": false,
+          "num_reports": null,
+          "ups": 25
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "josephspurrier.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cle3u",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "motojo",
+          "media": null,
+          "name": "t3_5cle3u",
+          "score": 47,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cle3u/go_in_the_workplace_using_go_in_a_team/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479000474.0,
+          "url": "http://www.josephspurrier.com/go-in-the-workplace/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Go in the Workplace - Using Go in a Team",
+          "created_utc": 1478971674.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 16,
+          "visited": false,
+          "num_reports": null,
+          "ups": 47
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "davidlebech.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cpfrn",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "dgryski",
+          "media": null,
+          "name": "t3_5cpfrn",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/FC9VFUCsahzOe0WcxtcteWAmS8xes43J-X8bjFNmmeo.jpg?s=e7b0e1c21b2860e999592cf359ab17b7",
+                  "width": 1600,
+                  "height": 1200
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/FC9VFUCsahzOe0WcxtcteWAmS8xes43J-X8bjFNmmeo.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=b3d1ebb46476134beebd8cf1d2f6162d",
+                    "width": 108,
+                    "height": 81
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/FC9VFUCsahzOe0WcxtcteWAmS8xes43J-X8bjFNmmeo.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=70b5521a5a7b4444d27c5203ae78834f",
+                    "width": 216,
+                    "height": 162
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/FC9VFUCsahzOe0WcxtcteWAmS8xes43J-X8bjFNmmeo.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=67e8c8d51fa82af40e0cdc7dcdc013f9",
+                    "width": 320,
+                    "height": 240
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/FC9VFUCsahzOe0WcxtcteWAmS8xes43J-X8bjFNmmeo.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=ef6dc09258a612062bf9c0d64837cc03",
+                    "width": 640,
+                    "height": 480
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/FC9VFUCsahzOe0WcxtcteWAmS8xes43J-X8bjFNmmeo.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=cb203be56b516d6ae750c933e0dbd2be",
+                    "width": 960,
+                    "height": 720
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/FC9VFUCsahzOe0WcxtcteWAmS8xes43J-X8bjFNmmeo.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=49d70a0a67236495d14f9ebb0d7a3f61",
+                    "width": 1080,
+                    "height": 810
+                  }
+                ],
+                "variants": {},
+                "id": "w6mzX3AwYBOkJZLFXdehgeL0J4YQ9Xc-NZqv6fqSD-Q"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/1uPVUDCPVU3VHW-KxibjWdZONVecLVpuopbxN8NlOR8.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cpfrn/golang_and_the_search_of_the_past/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479062267.0,
+          "url": "https://davidlebech.com/thoughtflow/golang-and-the-search-of-the-past/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Golang and the search of the past",
+          "created_utc": 1479033467.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "self.golang",
+          "subreddit": "golang",
+          "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;tl;dr: New to Go. Can you recommend a library for capturing network packet data?&lt;/p&gt;\n\n&lt;p&gt;As a learning exercise, I&amp;#39;m interested in writing something similar to &lt;a href=\"http://etherape.sourceforge.net/\"&gt;Etherape&lt;/a&gt; in Go. Digging around on GitHub I see a wrapper for libpcap and and another library for generating Berkeley Packet Filter VM programs. I&amp;#39;m not sure how either of those approaches would align with common practice for Go programs if at all.&lt;/p&gt;\n\n&lt;p&gt;Perhaps someone can share a library/package they&amp;#39;ve used and can recommend?&lt;/p&gt;\n\n&lt;p&gt;Thx&lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+          "selftext": "tl;dr: New to Go. Can you recommend a library for capturing network packet data?\n\nAs a learning exercise, I'm interested in writing something similar to [Etherape](http://etherape.sourceforge.net/) in Go. Digging around on GitHub I see a wrapper for libpcap and and another library for generating Berkeley Packet Filter VM programs. I'm not sure how either of those approaches would align with common practice for Go programs if at all.\n\nPerhaps someone can share a library/package they've used and can recommend?\n\nThx",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5clc03",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "nrvale00",
+          "media": null,
+          "name": "t3_5clc03",
+          "score": 11,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/L40xEOnQT41U7hAHhbhZR7imOq6g29fl1NBplEu9D6k.jpg?s=ab977c8fd1226b7c00053144131a5b7b",
+                  "width": 200,
+                  "height": 150
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/L40xEOnQT41U7hAHhbhZR7imOq6g29fl1NBplEu9D6k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=99a7dc9dd5e9b8863bbbd3d07855d36d",
+                    "width": 108,
+                    "height": 81
+                  }
+                ],
+                "variants": {},
+                "id": "9RnPMz0bZCDL5mgPl445UUoXh9RODTnD1ecx5iWlJDE"
+              }
+            ]
+          },
+          "thumbnail": "self",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "self",
+          "is_self": true,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5clc03/network_packet_capture_with_go/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478999723.0,
+          "url": "https://www.reddit.com/r/golang/comments/5clc03/network_packet_capture_with_go/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Network packet capture with Go?",
+          "created_utc": 1478970923.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 9,
+          "visited": false,
+          "num_reports": null,
+          "ups": 11
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "youtube.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": {
+            "type": "youtube.com",
+            "oembed": {
+              "provider_url": "https://www.youtube.com/",
+              "version": "1.0",
+              "title": "Code Swarm for go",
+              "type": "video",
+              "thumbnail_width": 480,
+              "height": 344,
+              "width": 459,
+              "html": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/lYStzdob2rE?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+              "author_name": "Landon Wilkins",
+              "thumbnail_height": 360,
+              "thumbnail_url": "https://i.ytimg.com/vi/lYStzdob2rE/hqdefault.jpg",
+              "provider_name": "YouTube",
+              "author_url": "https://www.youtube.com/user/Silvoir8"
+            }
+          },
+          "saved": false,
+          "id": "5clnub",
+          "gilded": 0,
+          "secure_media_embed": {
+            "content": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/lYStzdob2rE?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+            "width": 459,
+            "scrolling": false,
+            "height": 344
+          },
+          "clicked": false,
+          "report_reasons": null,
+          "author": "pretty_colors",
+          "media": {
+            "type": "youtube.com",
+            "oembed": {
+              "provider_url": "https://www.youtube.com/",
+              "version": "1.0",
+              "title": "Code Swarm for go",
+              "type": "video",
+              "thumbnail_width": 480,
+              "height": 344,
+              "width": 459,
+              "html": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/lYStzdob2rE?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+              "author_name": "Landon Wilkins",
+              "thumbnail_height": 360,
+              "thumbnail_url": "https://i.ytimg.com/vi/lYStzdob2rE/hqdefault.jpg",
+              "provider_name": "YouTube",
+              "author_url": "https://www.youtube.com/user/Silvoir8"
+            }
+          },
+          "name": "t3_5clnub",
+          "score": 8,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/bNtP3QrNjAlpMTNuERJjOGoXI8LpBRNXfgZ33f_zTXk.jpg?s=0f9059c9b2b66131be0eea593d1153a9",
+                  "width": 480,
+                  "height": 360
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/bNtP3QrNjAlpMTNuERJjOGoXI8LpBRNXfgZ33f_zTXk.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=226b74b606e7317f9b4c8da188d9eaa4",
+                    "width": 108,
+                    "height": 81
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/bNtP3QrNjAlpMTNuERJjOGoXI8LpBRNXfgZ33f_zTXk.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=83355c3a9d22f97a3962c974dddb241b",
+                    "width": 216,
+                    "height": 162
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/bNtP3QrNjAlpMTNuERJjOGoXI8LpBRNXfgZ33f_zTXk.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=cd32115a38ea2228504e37380bb47cf7",
+                    "width": 320,
+                    "height": 240
+                  }
+                ],
+                "variants": {},
+                "id": "Hn0gGzQbYGIpVzqqUL0ZolUunr4AUCFAoVVQiyHtbmM"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/iNHRcHNlS0MZUu4U6d-R2aNamDK7AweRG6Z7p6MJLJk.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {
+            "content": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/lYStzdob2rE?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+            "width": 459,
+            "scrolling": false,
+            "height": 344
+          },
+          "post_hint": "rich:video",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5clnub/code_swarm_for_go_visualization/",
+          "locked": false,
+          "stickied": false,
+          "created": 1479003802.0,
+          "url": "https://www.youtube.com/watch?v=lYStzdob2rE",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Code Swarm for go (visualization)",
+          "created_utc": 1478975002.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 1,
+          "visited": false,
+          "num_reports": null,
+          "ups": 8
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5ck47p",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "cs8425",
+          "media": null,
+          "name": "t3_5ck47p",
+          "score": 10,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/WB7ux5d0lAN7mcsFhc2wyEUjOHlwrIwDh-bg6TFBwkE.jpg?s=8611ca959c773de10b75c40d3d68c078",
+                  "width": 420,
+                  "height": 420
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/WB7ux5d0lAN7mcsFhc2wyEUjOHlwrIwDh-bg6TFBwkE.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=612c93b7543b61679e82be0101637b86",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/WB7ux5d0lAN7mcsFhc2wyEUjOHlwrIwDh-bg6TFBwkE.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=92378f981abcf6b554d0ef967dd1fa90",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/WB7ux5d0lAN7mcsFhc2wyEUjOHlwrIwDh-bg6TFBwkE.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=2b07dab04c37f6a9f87f6c8ef2723b5f",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "oj7DQsv1As5rttnQ30WLjLzK6OwHL-bduzL7WpBwNZQ"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/clcK-uZqKg0HenkKprelyBGtezN6--eoMOXq3VXkLMw.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5ck47p/goadbbot_android_bot_based_on_adb_and_golang/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478980915.0,
+          "url": "https://github.com/cs8425/go-adbbot",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "go-adbbot: android bot based on adb and golang",
+          "created_utc": 1478952115.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 10
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5ckiqw",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "jasonrichardsmith",
+          "media": null,
+          "name": "t3_5ckiqw",
+          "score": 2,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?s=59f8f9c4c389df012264d509de93be35",
+                  "width": 420,
+                  "height": 420
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=cf1ffd1cfd7db6892e5ec1bc3292fd31",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=01c560205563bdfc11a431bc3905cc83",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=cbfb64eb51237dba70910d2c8ab38bda",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "XdjhiKtqsD27rNgOOBWBg3CpRT_2AIOYjMoMIG7JYcg"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/jV88u-5qO64wuqUwdrBwcHUVn0hCsleNAs9MrfjxoI8.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5ckiqw/improved_filters_package_with_more_examples_and/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478988384.0,
+          "url": "https://github.com/pipes-and-filters/filters",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Improved filters package with more examples and example binary",
+          "created_utc": 1478959584.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 2
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cj7no",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "gernest_",
+          "media": null,
+          "name": "t3_5cj7no",
+          "score": 4,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/SHnqlbOH71IhE4Wa87urP6LHvjenLGxbDaBMd-2tXJ4.jpg?s=e248265203045e2aa19f210cc666e88d",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/SHnqlbOH71IhE4Wa87urP6LHvjenLGxbDaBMd-2tXJ4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=84f63c960a953835d1e0e55af90ad7b7",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/SHnqlbOH71IhE4Wa87urP6LHvjenLGxbDaBMd-2tXJ4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=0d280994b0d97510021c621e363514f7",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/SHnqlbOH71IhE4Wa87urP6LHvjenLGxbDaBMd-2tXJ4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=0a0911b9e7865b6b7881909c5626ba54",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "3zKHfDTQ6ItJfsWjyt3_gReNcZVJQlLpABvUyKxGD-s"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/2uZ6sAvfEqH0BwDNeyzDZmGMMOUbiYebiFNUBzPp71o.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cj7no/gernestblue_generate_influxdb_line_protocol_from/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478959794.0,
+          "url": "https://github.com/gernest/blue",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "gernest/blue- Generate influxdb line protocol from json",
+          "created_utc": 1478930994.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 4
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "siadat.github.io",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cjqq5",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "s-i-n-a",
+          "media": null,
+          "name": "t3_5cjqq5",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cjqq5/curious_gopher_overriding_a_struct_method/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478971923.0,
+          "url": "https://siadat.github.io/post/curious-gopher-override.html",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Curious Gopher: overriding a struct method",
+          "created_utc": 1478943123.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "blog.tarkalabs.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cg103",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "vagmi",
+          "media": null,
+          "name": "t3_5cg103",
+          "score": 16,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/Jk8vey0O-__eZsW5-Ugq0E0YhblDHcwzXUEAPIL7v5M.jpg?s=5bf336de0d08c2c28b348104300ac0bf",
+                  "width": 200,
+                  "height": 200
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/Jk8vey0O-__eZsW5-Ugq0E0YhblDHcwzXUEAPIL7v5M.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=66b4c6d3f0f982fb207466d16131721d",
+                    "width": 108,
+                    "height": 108
+                  }
+                ],
+                "variants": {},
+                "id": "MPJ5Uvkmj7nNvRnDQcQizigh7kPCROSpfpUwURDwSw0"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/p5AEtFxrml2JxcVuU9UOgxDjffECqVtBiW9OFx7Sx9w.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cg103/rate_limiting_the_right_way_using_token_buckets/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478917686.0,
+          "url": "https://blog.tarkalabs.com/2016/11/11/rate-limiting-the-right-way/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Rate limiting the right way using token buckets",
+          "created_utc": 1478888886.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 16
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "foxyutils.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5ch8qf",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "foxyutils",
+          "media": null,
+          "name": "t3_5ch8qf",
+          "score": 7,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/OvqeEjHzoahl4-cxXb4EnpIeIG_gfnHh4SrQrFa62h0.jpg?s=2fb11842a739b67a660b80da68f65d40",
+                  "width": 700,
+                  "height": 407
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/OvqeEjHzoahl4-cxXb4EnpIeIG_gfnHh4SrQrFa62h0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=4d79f36f4e443290fb08e3124711bb32",
+                    "width": 108,
+                    "height": 62
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/OvqeEjHzoahl4-cxXb4EnpIeIG_gfnHh4SrQrFa62h0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=81c5674066f4ef7ae054427eadaac83c",
+                    "width": 216,
+                    "height": 125
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/OvqeEjHzoahl4-cxXb4EnpIeIG_gfnHh4SrQrFa62h0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=f5333b9d9b959dee76fcafc274def0a2",
+                    "width": 320,
+                    "height": 186
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/OvqeEjHzoahl4-cxXb4EnpIeIG_gfnHh4SrQrFa62h0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=df751aca8f0b2efaaea1a504f499d301",
+                    "width": 640,
+                    "height": 372
+                  }
+                ],
+                "variants": {},
+                "id": "SHcrQtdQ93XiCy16Tv0ElZ7FMF-K2XLonw7mKgrBa2o"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/LhaXEa1w_LTJTC8ivVxovZpRInGf7uEH9YgXzwcWxyk.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5ch8qf/why_we_created_unidoc_with_golang/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478931061.0,
+          "url": "https://foxyutils.com/blog/2016/11/11/unidoc-golang-pdf-open-source-library/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Why We Created Unidoc With Golang",
+          "created_utc": 1478902261.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 3,
+          "visited": false,
+          "num_reports": null,
+          "ups": 7
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "self.golang",
+          "subreddit": "golang",
+          "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;Looking for a convincing story to choose Go over .Net for &amp;quot;anything&amp;quot;. Yes Go has a great concurrency model - the present state of concurrency/async/etc is not too shabby in .Net. Yes Go has great tooling - like it or not, Visual Studio is pretty damn good, and with the right setup you can be very efficient.\nI&amp;#39;ve built some decent CLI tools in Go, but I can do the same in .Net, perhaps not deployed in a single binary (unless you go the route of ILMerge), but still. Roughly equivalent and I can use F# if I want a more functional experience.&lt;/p&gt;\n\n&lt;p&gt;I&amp;#39;m asking this sincerely as someone who is trying to convince himself that there is value investing valuable time in Go in the future. I&amp;#39;m always learning new languages and there is major value in just the learning aspect alone. That said, given the current and planned future state with .Net (Core, cross platform, etc), why would you pick Go over .Net?&lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+          "selftext": "Looking for a convincing story to choose Go over .Net for \"anything\". Yes Go has a great concurrency model - the present state of concurrency/async/etc is not too shabby in .Net. Yes Go has great tooling - like it or not, Visual Studio is pretty damn good, and with the right setup you can be very efficient.\nI've built some decent CLI tools in Go, but I can do the same in .Net, perhaps not deployed in a single binary (unless you go the route of ILMerge), but still. Roughly equivalent and I can use F# if I want a more functional experience.\n\nI'm asking this sincerely as someone who is trying to convince himself that there is value investing valuable time in Go in the future. I'm always learning new languages and there is major value in just the learning aspect alone. That said, given the current and planned future state with .Net (Core, cross platform, etc), why would you pick Go over .Net?",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cenu6",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "salbass175",
+          "media": null,
+          "name": "t3_5cenu6",
+          "score": 23,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "self",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": true,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cenu6/go_over_netc_why/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478902328.0,
+          "url": "https://www.reddit.com/r/golang/comments/5cenu6/go_over_netc_why/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Go over .Net/C#, Why?",
+          "created_utc": 1478873528.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 62,
+          "visited": false,
+          "num_reports": null,
+          "ups": 23
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cfo4c",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "sajal",
+          "media": null,
+          "name": "t3_5cfo4c",
+          "score": 10,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/I77dqkL_JKvLwVw_1UqZK31BNzaLTF61Iz5Ufb3RIEM.jpg?s=88cf1de6f238b395f0d3a027a6d2b236",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/I77dqkL_JKvLwVw_1UqZK31BNzaLTF61Iz5Ufb3RIEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=792707a3d7e4a936377dea81533eb5fe",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/I77dqkL_JKvLwVw_1UqZK31BNzaLTF61Iz5Ufb3RIEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=6d4f60c2e1bb90fc4cd0764ee0fd7cad",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/I77dqkL_JKvLwVw_1UqZK31BNzaLTF61Iz5Ufb3RIEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=94ac4fd72d415c7acbd1f76961e373fc",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "zTw-qv1hIaXES37q_LWYgfxjxbE25T4_aD9LXvlnIh0"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/lnWXW6fvrQ7zb1K5zb4UO7Wx0mLwemCKmiFSKz5XJqM.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cfo4c/dboxserver_serve_files_out_of_any_dropbox_folder/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478913965.0,
+          "url": "https://github.com/sajal/dboxserver",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "dboxserver - serve files out of any dropbox folder over https",
+          "created_utc": 1478885165.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 1,
+          "visited": false,
+          "num_reports": null,
+          "ups": 10
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "medium.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cgv5l",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "mlowicki",
+          "media": null,
+          "name": "t3_5cgv5l",
+          "score": 3,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/EYJ7U_qJsgUwXXu41jV4YPnnDoKmFbwi9Ux0op1FA5k.jpg?s=7135624577dba598e4bdcc6d4cf0dd17",
+                  "width": 1200,
+                  "height": 562
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/EYJ7U_qJsgUwXXu41jV4YPnnDoKmFbwi9Ux0op1FA5k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=de8492106c0f8177d23e1b1aa6f1de85",
+                    "width": 108,
+                    "height": 50
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/EYJ7U_qJsgUwXXu41jV4YPnnDoKmFbwi9Ux0op1FA5k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=dda6ba67f5692757b39aba7cbb9318dd",
+                    "width": 216,
+                    "height": 101
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/EYJ7U_qJsgUwXXu41jV4YPnnDoKmFbwi9Ux0op1FA5k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=5696ae861492c69b3b1a60b9cdf4f77d",
+                    "width": 320,
+                    "height": 149
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/EYJ7U_qJsgUwXXu41jV4YPnnDoKmFbwi9Ux0op1FA5k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=96a69544f9c5bc25517b3fa29ea3348b",
+                    "width": 640,
+                    "height": 299
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/EYJ7U_qJsgUwXXu41jV4YPnnDoKmFbwi9Ux0op1FA5k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=5086db8d04593a4911d2b446056c9e73",
+                    "width": 960,
+                    "height": 449
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/EYJ7U_qJsgUwXXu41jV4YPnnDoKmFbwi9Ux0op1FA5k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=b0b5c1588f6eac2f6e7427f6de2fcc7f",
+                    "width": 1080,
+                    "height": 505
+                  }
+                ],
+                "variants": {},
+                "id": "iJ5LfdeZG-mP9g3RClVCAjBZMHkx89frb597oasnVMc"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/kmD8nijdM1BrDsA0zsXIP8GMCrKd7eDi5AzqoShoUZA.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cgv5l/synchronized_goroutines_part_i/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478926845.0,
+          "url": "https://medium.com/golangspec/synchronized-goroutines-part-i-4fbcdd64a4ec",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Synchronized goroutines (part I)",
+          "created_utc": 1478898045.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 3
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cevjp",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "karnd01",
+          "media": null,
+          "name": "t3_5cevjp",
+          "score": 7,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/fSRFGxnrJ8C7HxqVrqC-KE-nYIz3nu4vgjiglCP2Nq4.jpg?s=7e320aae76cf78b0a3df0c126dd84417",
+                  "width": 214,
+                  "height": 214
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/fSRFGxnrJ8C7HxqVrqC-KE-nYIz3nu4vgjiglCP2Nq4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=c57cf8cc54fa3ceaff5bc7e79746a918",
+                    "width": 108,
+                    "height": 108
+                  }
+                ],
+                "variants": {},
+                "id": "yahrEIFetiQ89r6Jxsty6n0neart2B37ckeLbNevqac"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/pNu41W98J1scAan3NHUF-V7_o0ORLxX-ItiRGF8OS9c.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cevjp/goplaygroundkms_is_a_library_that_aids_in/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478905130.0,
+          "url": "https://github.com/go-playground/kms",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "go-playground/kms: Is a library that aids in graceful shutdown of a process/application",
+          "created_utc": 1478876330.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 5,
+          "visited": false,
+          "num_reports": null,
+          "ups": 7
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cfzgh",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "Damien0",
+          "media": null,
+          "name": "t3_5cfzgh",
+          "score": 3,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/ic6e8rwdLjXw3bbbDWw_1CNaTij0EAticRgj1H9T5ls.jpg?s=68993e9db51e4bb57a44b57b9d0d640a",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/ic6e8rwdLjXw3bbbDWw_1CNaTij0EAticRgj1H9T5ls.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=eea2df3ca8f70bab218a282fe3e4fcb1",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/ic6e8rwdLjXw3bbbDWw_1CNaTij0EAticRgj1H9T5ls.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=7648351e9dd588f4a2b627c8ab3b7e6b",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/ic6e8rwdLjXw3bbbDWw_1CNaTij0EAticRgj1H9T5ls.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=05babfb5a4d0a6d315ff8316c34f1999",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "yjtswj4zI4Q3X37QtbeS4HabDf-PNONhLpU2R8Z8q2A"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/BrsCnhYFCEHTL5NvIb-Qx_AmYOAUCIj1jub8SYrmIq8.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cfzgh/typereact_a_minimal_typescriptreactgo_starter_kit/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478917235.0,
+          "url": "https://github.com/blinkanalytics/typereact",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "typereact: A minimal TypeScript/React/Go starter kit",
+          "created_utc": 1478888435.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 8,
+          "visited": false,
+          "num_reports": null,
+          "ups": 3
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "sqlserverio.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cfpen",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "shovelpost",
+          "media": null,
+          "name": "t3_5cfpen",
+          "score": 2,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/wqEV2qts-5RB4h3OvWzbNK0-RThaVs0W3c-aIkaTFac.jpg?s=8c91bf794e2afd53b32cbb8f58394500",
+                  "width": 200,
+                  "height": 200
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/wqEV2qts-5RB4h3OvWzbNK0-RThaVs0W3c-aIkaTFac.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=4be4c31c8baf354e883ad26752fec93a",
+                    "width": 108,
+                    "height": 108
+                  }
+                ],
+                "variants": {},
+                "id": "eQB8F2WzaeADGJNuGejufaWDKtn4Kjq5lPz1jvOjEHQ"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/9EJp117imQT8C2vjUs6evWzLjzPJJaRee3SBQZrXjMQ.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cfpen/go_go_golang_sqlserverio/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478914333.0,
+          "url": "http://sqlserverio.com/2016/08/17/go-go-golang/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Go, Go, Golang! - SQLServerIO",
+          "created_utc": 1478885533.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 4,
+          "visited": false,
+          "num_reports": null,
+          "ups": 2
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "medium.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cetoq",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "dgryski",
+          "media": null,
+          "name": "t3_5cetoq",
+          "score": 4,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cetoq/encrypted_configuration_in_go/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478904512.0,
+          "url": "https://medium.com/@cdrev/encrypted-configuration-in-go-e5805564292",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Encrypted Configuration in Go \ud83d\udd10",
+          "created_utc": 1478875712.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 3,
+          "visited": false,
+          "num_reports": null,
+          "ups": 4
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cgrka",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "RwKroon",
+          "media": null,
+          "name": "t3_5cgrka",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/R8T-bBihvPnwHyfeOuUQ0SfTLLNoO5hDcXYq6Q_AFr4.jpg?s=f40e6c13636451ef4659182186c5c73f",
+                  "width": 391,
+                  "height": 391
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/R8T-bBihvPnwHyfeOuUQ0SfTLLNoO5hDcXYq6Q_AFr4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=8cb02076a9d59b838f4eaa2baaad7f3c",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/R8T-bBihvPnwHyfeOuUQ0SfTLLNoO5hDcXYq6Q_AFr4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=a9f187d4b2d37b7b1b0332c8973a54e8",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/R8T-bBihvPnwHyfeOuUQ0SfTLLNoO5hDcXYq6Q_AFr4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=591ebe77488ae0b302c296a5ffa444bd",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "a_j_2UoFhAHV4o9zBPg_jyeCLZAX_t8zE2K2hOfFtGE"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/iuTh0BDfwwsRW2WLnMLoDTQNNlc3opXpNmHjMkeh7W4.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cgrka/i_created_locking_and_task_distribution_using/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478925710.0,
+          "url": "https://github.com/ReneKroon/mogul",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "I created locking and task distribution using mongodb. Useful for services with just a few nodes.",
+          "created_utc": 1478896910.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "blog.golang.org",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c8338",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "sbinet",
+          "media": null,
+          "name": "t3_5c8338",
+          "score": 148,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/WYhSqDVNH9_n4Rai6HzMSeXdTTa1ozOve7KCFE7Ka18.jpg?s=7999566f8eef8f035d79f9150fe521d9",
+                  "width": 300,
+                  "height": 313
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/WYhSqDVNH9_n4Rai6HzMSeXdTTa1ozOve7KCFE7Ka18.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=7a3e55d94d50df88d65c7a3988eb5563",
+                    "width": 108,
+                    "height": 112
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/WYhSqDVNH9_n4Rai6HzMSeXdTTa1ozOve7KCFE7Ka18.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=9dbaedec711bbc77313a06d25b7a76e1",
+                    "width": 216,
+                    "height": 225
+                  }
+                ],
+                "variants": {},
+                "id": "lMqXqsiv-FBkX4eJGEWeK1Jh26yhoZMq53ErK5LRvw4"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/QMaHlQAvwwAGEeN0IGPXVhIv3Reu9H-fP6ErsyhqZ5k.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": "gopher",
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c8338/seven_years_of_go/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478816955.0,
+          "url": "https://blog.golang.org/7years",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Seven years of Go",
+          "created_utc": 1478788155.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 13,
+          "visited": false,
+          "num_reports": null,
+          "ups": 148
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "youtu.be",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": {
+            "oembed": {
+              "provider_url": "https://www.youtube.com/",
+              "version": "1.0",
+              "title": "justforfunc #5: Defining a Color Flag in Go",
+              "type": "video",
+              "thumbnail_width": 480,
+              "height": 344,
+              "width": 459,
+              "html": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/4D506W1AjeM?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+              "author_name": "JustForFunc",
+              "thumbnail_height": 360,
+              "thumbnail_url": "https://i.ytimg.com/vi/4D506W1AjeM/hqdefault.jpg",
+              "provider_name": "YouTube",
+              "author_url": "https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw"
+            },
+            "type": "youtube.com"
+          },
+          "saved": false,
+          "id": "5caz16",
+          "gilded": 0,
+          "secure_media_embed": {
+            "content": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/4D506W1AjeM?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+            "width": 459,
+            "scrolling": false,
+            "height": 344
+          },
+          "clicked": false,
+          "report_reasons": null,
+          "author": "campoy",
+          "media": {
+            "oembed": {
+              "provider_url": "https://www.youtube.com/",
+              "version": "1.0",
+              "title": "justforfunc #5: Defining a Color Flag in Go",
+              "type": "video",
+              "thumbnail_width": 480,
+              "height": 344,
+              "width": 459,
+              "html": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/4D506W1AjeM?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+              "author_name": "JustForFunc",
+              "thumbnail_height": 360,
+              "thumbnail_url": "https://i.ytimg.com/vi/4D506W1AjeM/hqdefault.jpg",
+              "provider_name": "YouTube",
+              "author_url": "https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw"
+            },
+            "type": "youtube.com"
+          },
+          "name": "t3_5caz16",
+          "score": 26,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/crVTO1ONmPURh2bLGUGJrOqvejnk5xEOjrMQ8LhVT84.jpg?s=6d40570e64af04248c943a1730a5359e",
+                  "width": 480,
+                  "height": 360
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/crVTO1ONmPURh2bLGUGJrOqvejnk5xEOjrMQ8LhVT84.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=62d01c0ee4d4e50c54fd1e84c4a3f354",
+                    "width": 108,
+                    "height": 81
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/crVTO1ONmPURh2bLGUGJrOqvejnk5xEOjrMQ8LhVT84.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=a6fe9bd329f6b2381d73ff0582fd2455",
+                    "width": 216,
+                    "height": 162
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/crVTO1ONmPURh2bLGUGJrOqvejnk5xEOjrMQ8LhVT84.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=21e3c20c4402e4a543094f43a703d1d0",
+                    "width": 320,
+                    "height": 240
+                  }
+                ],
+                "variants": {},
+                "id": "0m_AVXMHUKWvyQP07y6JWMSYLljECfqbx4KiimDesX8"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/CzPvlB4WoiE6ajEua7vDUdw9WrnWHnnbYG6GfgppeVU.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": "gopher",
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {
+            "content": "&lt;iframe width=\"459\" height=\"344\" src=\"https://www.youtube.com/embed/4D506W1AjeM?feature=oembed\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+            "width": 459,
+            "scrolling": false,
+            "height": 344
+          },
+          "post_hint": "rich:video",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5caz16/justforfunc_5_defining_a_color_flag_in_go/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478847224.0,
+          "url": "https://youtu.be/4D506W1AjeM?list=PL64wiCrrxh4Jisi7OcCJIUpguV_f5jGnZ",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "justforfunc #5: Defining a Color Flag in Go",
+          "created_utc": 1478818424.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 3,
+          "visited": false,
+          "num_reports": null,
+          "ups": 26
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5cetdu",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "epiris",
+          "media": null,
+          "name": "t3_5cetdu",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?s=ebdedb20a51740132b0751b8613712f8",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=21b7709a0754fca449748af56e78036b",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=3bd51e1798e0aaa1767faaa7262c3f93",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=a4291f963d54de0be3715c558651ba5f",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "_TmJcd8ztN_mrc2BXLwelsXEDVGG1j9j8zCjcWkrVgY"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/fHq9tnZ4CVJaRTTqCu1do8wxuKdw8P4AWkEtfuIgYBM.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5cetdu/goiter_package_iter_provides_primitives_for/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478904407.0,
+          "url": "https://github.com/cstockton/go-iter",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "go-iter: Package iter provides primitives for walking arbitrary data structures.",
+          "created_utc": 1478875607.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "imgur.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c6x6l",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "Hactually",
+          "media": null,
+          "name": "t3_5c6x6l",
+          "score": 14,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "thumbnail": "default",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c6x6l/3d_printed_a_go_gopher_today/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478797219.0,
+          "url": "http://imgur.com/igx9Mze",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "3D printed a Go gopher today",
+          "created_utc": 1478768419.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 10,
+          "visited": false,
+          "num_reports": null,
+          "ups": 14
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c3vb6",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "DOP251",
+          "media": null,
+          "name": "t3_5c3vb6",
+          "score": 90,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/qL8S_we5_cQDAJx6VwMK-EBlFdEaGrjomomblpG-VqM.jpg?s=405f72e96fc5e073b507411c09a08352",
+                  "width": 420,
+                  "height": 420
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/qL8S_we5_cQDAJx6VwMK-EBlFdEaGrjomomblpG-VqM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=784e63c908a2ab28119b24508a4c126f",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/qL8S_we5_cQDAJx6VwMK-EBlFdEaGrjomomblpG-VqM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=52ec58fe25ef9f2d575086cef0e0e905",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/qL8S_we5_cQDAJx6VwMK-EBlFdEaGrjomomblpG-VqM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=e551cc4c5345f579f5233d447dfbf878",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "1AqC2pP6dV7O5Wzj-vI912jqwjytopaPhd-QHLmmCqQ"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/yoEA-fS0owA73PZmq0wJxHtch6NQgSfjM2_j6MhosTU.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c3vb6/almost_fully_compliant_ecmascript_51/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478755888.0,
+          "url": "https://github.com/dop251/goja",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "(Almost) fully compliant ECMAScript 5.1(+) implementation written in Go",
+          "created_utc": 1478727088.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 21,
+          "visited": false,
+          "num_reports": null,
+          "ups": 90
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c7auw",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "felixge",
+          "media": null,
+          "name": "t3_5c7auw",
+          "score": 6,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/X_7StbCBAmthSXpfQ4rbaeT5IupQwfXp1TQCQBznPd4.jpg?s=089e7e2f33c015fd423d124788befe72",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/X_7StbCBAmthSXpfQ4rbaeT5IupQwfXp1TQCQBznPd4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=980a471ad5c1d3cace47f48c463af197",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/X_7StbCBAmthSXpfQ4rbaeT5IupQwfXp1TQCQBznPd4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=03cf818a4415279c7e952ffe4c9d8688",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/X_7StbCBAmthSXpfQ4rbaeT5IupQwfXp1TQCQBznPd4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=152afeb986c860990f28f828e0e48c7d",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "pLbwPOZlz-UleZBLXlE_0SugXYInv0Av3Ji2sZl6CzE"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/x8llvhtnQUCjPUOdeKG5TfaEOdYdR9mOgZAvfWh30mU.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c7auw/ann_httpsnoop_an_easy_way_to_capture_http_related/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478804916.0,
+          "url": "https://github.com/felixge/httpsnoop",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "[ANN] httpsnoop, an easy way to capture http related metrics (response time, bytes written, and http status code)",
+          "created_utc": 1478776116.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 6,
+          "visited": false,
+          "num_reports": null,
+          "ups": 6
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "self.golang",
+          "subreddit": "golang",
+          "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;Swan is a mesos scheduling framework written in golang based on mesos new HTTP API.&lt;/p&gt;\n\n&lt;p&gt;You can use swan to deployment application on mesos cluster, and manage the entire lifecycle of the application. you can do rolling-update with new version, you can scale application, and you can do health check for your applications and auto failover when applications or services are not available.&lt;/p&gt;\n\n&lt;p&gt;Swan is maintained by dataman-cloud, and licensed under the Apache License, Version 2.0.&lt;/p&gt;\n\n&lt;p&gt;Fork me on GitHub!\n&lt;a href=\"https://github.com/Dataman-Cloud/swan\"&gt;https://github.com/Dataman-Cloud/swan&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;Application deployment&lt;/li&gt;\n&lt;li&gt;Application scaling&lt;/li&gt;\n&lt;li&gt;Rolling update&lt;/li&gt;\n&lt;li&gt;Version rollback&lt;/li&gt;\n&lt;li&gt;Health check&lt;/li&gt;\n&lt;li&gt;Auto failover&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;p&gt;&lt;strong&gt;Special features&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;The instance name is fixed during the application lifecycle.&lt;/li&gt;\n&lt;li&gt;The instance index is continuously incremented from zero.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+          "selftext": "Swan is a mesos scheduling framework written in golang based on mesos new HTTP API.\n\nYou can use swan to deployment application on mesos cluster, and manage the entire lifecycle of the application. you can do rolling-update with new version, you can scale application, and you can do health check for your applications and auto failover when applications or services are not available.\n\nSwan is maintained by dataman-cloud, and licensed under the Apache License, Version 2.0.\n\nFork me on GitHub!\nhttps://github.com/Dataman-Cloud/swan\n\n**Features**\n\n* Application deployment\n* Application scaling\n* Rolling update\n* Version rollback\n* Health check\n* Auto failover\n\n**Special features**\n\n* The instance name is fixed during the application lifecycle.\n* The instance index is continuously incremented from zero.",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c6gf8",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "Dataman_",
+          "media": null,
+          "name": "t3_5c6gf8",
+          "score": 6,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/4Jz8Bwu4GA57lwMwwlNEAtdcYFfi9iVRwNzDmpEzSvE.jpg?s=937d60f1307dc8f07df4515e1120590c",
+                  "width": 175,
+                  "height": 175
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/4Jz8Bwu4GA57lwMwwlNEAtdcYFfi9iVRwNzDmpEzSvE.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=4515a1c045e9b3f3798f89b9185308d9",
+                    "width": 108,
+                    "height": 108
+                  }
+                ],
+                "variants": {},
+                "id": "69b8eXXGTeWAMoZEET8WCSZ9SYeHoARgYlbe2g8Vtvs"
+              }
+            ]
+          },
+          "thumbnail": "self",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "self",
+          "is_self": true,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c6gf8/swana_mesos_scheduling_framework_written_in/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478788438.0,
+          "url": "https://www.reddit.com/r/golang/comments/5c6gf8/swana_mesos_scheduling_framework_written_in/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Swan:a mesos scheduling framework written in golang based on mesos new HTTP API",
+          "created_utc": 1478759638.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 6
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c6h7v",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "epiris",
+          "media": null,
+          "name": "t3_5c6h7v",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?s=ebdedb20a51740132b0751b8613712f8",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=21b7709a0754fca449748af56e78036b",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=3bd51e1798e0aaa1767faaa7262c3f93",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/VvlIf0BKguARJhjCpcz1PyYtK5EZrcmM0e3g37g_p60.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=a4291f963d54de0be3715c558651ba5f",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "_TmJcd8ztN_mrc2BXLwelsXEDVGG1j9j8zCjcWkrVgY"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/F7MY9Va491jzHOtdLvSaNv5nombxXJHYC92sjZG7gSQ.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c6h7v/github_cstocktongocall_package_call_provides_an/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478788812.0,
+          "url": "https://github.com/cstockton/go-call",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "GitHub - cstockton/go-call: Package call provides an interface for safely calling functions (quickly) at runtime while retaining types for the callee.",
+          "created_utc": 1478760012.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 6,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c35fp",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "janiszt",
+          "media": null,
+          "name": "t3_5c35fp",
+          "score": 8,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/xFIXfDrGDAPeMnF7dPU8UGTNeQaFfz4CgJSREGAG8EM.jpg?s=038f4508f92a33af0bb0e5c7d19b978e",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/xFIXfDrGDAPeMnF7dPU8UGTNeQaFfz4CgJSREGAG8EM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=7d90e3fe94db61fa17447ef1a8f23fda",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/xFIXfDrGDAPeMnF7dPU8UGTNeQaFfz4CgJSREGAG8EM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=4227233443c32976416f56acb97b5ec1",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/xFIXfDrGDAPeMnF7dPU8UGTNeQaFfz4CgJSREGAG8EM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=8fe3710b9dfb3fb2f65dc9aafd133fc1",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "TUi6wxQUX-ZP3mlivhL4cmkj183HbZ-53146B95SKQQ"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/oA0BG9hcx_o4kwQHhb1ZzOsPvc2OiCKeIOtSURl_KwM.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c35fp/github_wendigogobindplugin_gobindplugin_generates/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478748597.0,
+          "url": "https://github.com/wendigo/go-bind-plugin",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "GitHub \u2013 wendigo/go-bind-plugin: go-bind-plugin generates API for go plugin exported symbols (-buildmode=plugin)",
+          "created_utc": 1478719797.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 4,
+          "visited": false,
+          "num_reports": null,
+          "ups": 8
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c57kf",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "CodeHex",
+          "media": null,
+          "name": "t3_5c57kf",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/53w91v999KjKummG_Y0hil5tibxsFXTlcO8AUlVuqT0.jpg?s=8f44197092dbbeb8942b239e30fc533f",
+                  "width": 300,
+                  "height": 300
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/53w91v999KjKummG_Y0hil5tibxsFXTlcO8AUlVuqT0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=71f9e4c56e143850849c9d658b612f5e",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/53w91v999KjKummG_Y0hil5tibxsFXTlcO8AUlVuqT0.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=9447cd7c6a8a56c0d6608add7c501fd9",
+                    "width": 216,
+                    "height": 216
+                  }
+                ],
+                "variants": {},
+                "id": "SNagz58BjuuPzj3WlNVocH5pbpwH_cGp7cX25IiWem4"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/IFfI8UNhJ9ChlbIBMiFznv_BDe2p5vqe5dCudJbPZfg.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c57kf/github_codehexsaltissimo_easy_generate_easy/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478771118.0,
+          "url": "https://github.com/Code-Hex/saltissimo",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "GitHub - Code-Hex/saltissimo: Easy generate, easy compare hash using hmac",
+          "created_utc": 1478742318.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 9,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c6yke",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "paulmfox",
+          "media": null,
+          "name": "t3_5c6yke",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/7_VJVxCShyqFtqu750P-CCfZfllF4pvBpDyBN-zdOQA.jpg?s=f3aea04882055631ec4e41e388ad540b",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/7_VJVxCShyqFtqu750P-CCfZfllF4pvBpDyBN-zdOQA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=859ba2c930caf3cec9ddf2f7b9dadf9f",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/7_VJVxCShyqFtqu750P-CCfZfllF4pvBpDyBN-zdOQA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=c95c28350936e68824ca65f7a74d5d69",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/7_VJVxCShyqFtqu750P-CCfZfllF4pvBpDyBN-zdOQA.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=bb890f521c74fdd62b9e202b658792d3",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "zBHviAEDlhjatVfAyN1iIkkk6jzaBe-HvP5Ek6QlSbQ"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/hTwltt2fKXxy8sFO5HLKwDK9ywz0Y-zUm2-QTukglrQ.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c6yke/github_homemadescl_the_sepia_configuration/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478797998.0,
+          "url": "https://github.com/homemade/scl",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "GitHub - homemade/scl: The Sepia Configuration Language is an extension of the Hashicorp Configuration Language. SCL is to HCL as Sass is to CSS.",
+          "created_utc": 1478769198.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c5n99",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "ismkv",
+          "media": null,
+          "name": "t3_5c5n99",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/dCzbsmEY6WWcm0kx6pVA2odR82HMKqNIW7Q2sq7GLm4.jpg?s=6de1272fa2b70d79867c12d06976a436",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/dCzbsmEY6WWcm0kx6pVA2odR82HMKqNIW7Q2sq7GLm4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=b113e9dc99a3915bd003251ee20be986",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/dCzbsmEY6WWcm0kx6pVA2odR82HMKqNIW7Q2sq7GLm4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=50768968a7237884fd34277c5e67475a",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/dCzbsmEY6WWcm0kx6pVA2odR82HMKqNIW7Q2sq7GLm4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=70346b917183e01b68dfd99d04891680",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "DEaXsuxJuL66j6X3gk91vKMgMPhO0FKBFdeDszt3A9M"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/NPJuVw13cutvwb2nRVbFIGjWyNNLme_WpCcR-RbyJKg.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c5n99/utility_for_search_rss_feeds_on_httpsfeedlycom/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478776611.0,
+          "url": "https://github.com/egorsmkv/feedly_search",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Utility for search RSS feeds on https://feedly.com",
+          "created_utc": 1478747811.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "self.golang",
+          "subreddit": "golang",
+          "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;I found &lt;a href=\"https://play.golang.org/p/wTC00b0pAZ\"&gt;this playground example&lt;/a&gt; showing off function overloading.&lt;/p&gt;\n\n&lt;p&gt;It claims the //+overloaded comments are necessary to maintain the Go Promise of Compatibility, but as you can see &lt;a href=\"https://play.golang.org/p/WpwPhdwvD3\"&gt;here&lt;/a&gt; it works just fine without those comments.  I tested locally on Mac OS Go 1.7.3 with the same result.&lt;/p&gt;\n\n&lt;p&gt;Does anyone know what the story is on this?&lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+          "selftext": "I found [this playground example](https://play.golang.org/p/wTC00b0pAZ) showing off function overloading.\n\nIt claims the //+overloaded comments are necessary to maintain the Go Promise of Compatibility, but as you can see [here](https://play.golang.org/p/WpwPhdwvD3) it works just fine without those comments.  I tested locally on Mac OS Go 1.7.3 with the same result.\n\nDoes anyone know what the story is on this?",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c57kg",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "BenjaminZarzycki",
+          "media": null,
+          "name": "t3_5c57kg",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/6NRaaAy666PTmx_uWsv2-zqU3GJ1kMVtqkVjIPUvrVw.jpg?s=dd4dced9feea5fdc084c8f154e2ed08f",
+                  "width": 172,
+                  "height": 100
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/6NRaaAy666PTmx_uWsv2-zqU3GJ1kMVtqkVjIPUvrVw.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=8b4af2e2208b469042a1f442ce3d63c5",
+                    "width": 108,
+                    "height": 62
+                  }
+                ],
+                "variants": {},
+                "id": "CKxLj0Ie-wVK9Ipg2bRsrqiqU0gWwOnxUpe0PRnwfFY"
+              }
+            ]
+          },
+          "thumbnail": "self",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "self",
+          "is_self": true,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c57kg/when_did_function_overloading_get_slipped_in/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478771119.0,
+          "url": "https://www.reddit.com/r/golang/comments/5c57kg/when_did_function_overloading_get_slipped_in/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "When did function overloading get slipped in?",
+          "created_utc": 1478742319.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 8,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5bxtt5",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "nilslice",
+          "media": null,
+          "name": "t3_5bxtt5",
+          "score": 16,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/HHmUaK0i9ZjIEcuzzEcwK0nJlV-Gd9gI-6lLV3U12q4.jpg?s=438d06cc9281695e145fed9f83c97eea",
+                  "width": 272,
+                  "height": 272
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/HHmUaK0i9ZjIEcuzzEcwK0nJlV-Gd9gI-6lLV3U12q4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=8882399f293274879b51886bb44c003b",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/HHmUaK0i9ZjIEcuzzEcwK0nJlV-Gd9gI-6lLV3U12q4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=24206cc0961347ffa8f14c73ac8fe4d8",
+                    "width": 216,
+                    "height": 216
+                  }
+                ],
+                "variants": {},
+                "id": "YBn2K6YZWVxX5Yjwkr7zjplzBtOZjw4Bb7wfZ2sGD0U"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/JsgRCiRNoun4uZeIj5L7PldUeocB3OIRmqw3N054-jA.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5bxtt5/minimal_email_sender_in_go_handles_mx_lookup/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478688250.0,
+          "url": "https://github.com/nilslice/email",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Minimal email sender in Go. Handles MX lookup &amp; automatic mail server connection, requiring only the recipient email address",
+          "created_utc": 1478659450.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 32,
+          "visited": false,
+          "num_reports": null,
+          "ups": 16
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5c1t8g",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "mrichman",
+          "media": null,
+          "name": "t3_5c1t8g",
+          "score": 0,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/YetZXeQ6YKQKq5fhtygDnQl2ti9Gbu1EIt0DCrgjS2k.jpg?s=5d623731e1e16c3fb1dfb273e9670546",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/YetZXeQ6YKQKq5fhtygDnQl2ti9Gbu1EIt0DCrgjS2k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=5f76d16773b57e4c87f2a2a83b88ed8d",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/YetZXeQ6YKQKq5fhtygDnQl2ti9Gbu1EIt0DCrgjS2k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=ebebb1e43d4ed5f353cc3fee2c8e10f1",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/YetZXeQ6YKQKq5fhtygDnQl2ti9Gbu1EIt0DCrgjS2k.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=079d546744dbe5f576a93b8d5d00265c",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "cRmCLVmoOoF_q4Wyjet7r8D9KUeT_oAxg12hGKQq1kY"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/6HZkhGYP5HFMRxjtdqZbvXYEHWVJjdyV2OcURx_yY2c.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5c1t8g/github_mrichmanguffer_guffer_tweets_based_on_a/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478735332.0,
+          "url": "https://github.com/mrichman/guffer",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "GitHub - mrichman/guffer: Guffer tweets based on a daily schedule",
+          "created_utc": 1478706532.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 0
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "blog.scottlogic.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5bt1u5",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "dgryski",
+          "media": null,
+          "name": "t3_5bt1u5",
+          "score": 45,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/OYCC6loL46ygETc1a5wn4gPhd8xQDdruXUt3nmgOFhU.jpg?s=f51dfef220e4ba30c2f05f5b5d2a5b7e",
+                  "width": 300,
+                  "height": 300
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/OYCC6loL46ygETc1a5wn4gPhd8xQDdruXUt3nmgOFhU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=63026a54f59feb1c9eee2a5951050b5f",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/OYCC6loL46ygETc1a5wn4gPhd8xQDdruXUt3nmgOFhU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=155a7556cb7c3222c952c715a396041e",
+                    "width": 216,
+                    "height": 216
+                  }
+                ],
+                "variants": {},
+                "id": "pFlgV1Div-N99WD8JPFAxsd-tFzEJ9pgK6GNWr0b1Sw"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/OVDT-75IOrqvzCDT5DluLqHlZiDeUX0ByNIlwnb-6I8.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5bt1u5/creating_a_simple_particle_simulation_with_go/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478638870.0,
+          "url": "http://blog.scottlogic.com/2016/11/01/go-particle-simulation.html",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Creating a Simple Particle Simulation with Go",
+          "created_utc": 1478610070.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 8,
+          "visited": false,
+          "num_reports": null,
+          "ups": 45
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5bukub",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "itsmontoya",
+          "media": null,
+          "name": "t3_5bukub",
+          "score": 9,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/25Ro3Gn-cXw4UKy37DNTYzjEb4Q1z_f3aW3y1cLDCm4.jpg?s=132122eda998ded08e53a70ac9ef37f0",
+                  "width": 400,
+                  "height": 400
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/25Ro3Gn-cXw4UKy37DNTYzjEb4Q1z_f3aW3y1cLDCm4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=ac2e29201ba71242c781567066c5e421",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/25Ro3Gn-cXw4UKy37DNTYzjEb4Q1z_f3aW3y1cLDCm4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=e820e4f57884afb02222874849fb8f3c",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/25Ro3Gn-cXw4UKy37DNTYzjEb4Q1z_f3aW3y1cLDCm4.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=b37a3b66f1dac8d6d16d5fe7290b45ae",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "iuPyaxcYQDbQIr__zv-6p_GfoGoIiSZ-qfbJccu2YaY"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/pytL6oWr7m4jP1Se96m1C52Hw9OolFLl9RiO4LoUw20.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5bukub/mailbox_an_alternative_to_go_channels/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478654916.0,
+          "url": "https://github.com/itsmontoya/mailbox",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Mailbox, an alternative to Go channels",
+          "created_utc": 1478626116.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 36,
+          "visited": false,
+          "num_reports": null,
+          "ups": 9
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "blog.davidvassallo.me",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5bvcok",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "J3diMindTricks",
+          "media": null,
+          "name": "t3_5bvcok",
+          "score": 7,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/kMQWwPFEAOfsofjGDxFrB_r9G3G5HLE2sPIldTGhZRs.jpg?s=1ab30222ab33c2352b756787b7d3ae92",
+                  "width": 443,
+                  "height": 471
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/kMQWwPFEAOfsofjGDxFrB_r9G3G5HLE2sPIldTGhZRs.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=968d0272af4b214dfe44ebfec6a16f8d",
+                    "width": 108,
+                    "height": 114
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/kMQWwPFEAOfsofjGDxFrB_r9G3G5HLE2sPIldTGhZRs.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=29c7e3fbc2a7ebdfc3cdfe4ec69fe291",
+                    "width": 216,
+                    "height": 229
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/kMQWwPFEAOfsofjGDxFrB_r9G3G5HLE2sPIldTGhZRs.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=f1354656b143c655850bc1fb463fb96e",
+                    "width": 320,
+                    "height": 340
+                  }
+                ],
+                "variants": {},
+                "id": "lqopnJHbfay5v545BRwljHy8bi6H9k6K-JYWsJB55qg"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/IDKf4b9bBcgAsF_3jU2SF7B9SCqxVW007IIQsnDP37k.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5bvcok/simple_golang_dns_sniffer_to_elasticsearch/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478662148.0,
+          "url": "http://blog.davidvassallo.me/2016/11/03/simple-dns-sniffer-in-golang/",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Simple GoLang DNS sniffer to ElasticSearch",
+          "created_utc": 1478633348.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 7
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5bs7gl",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "fabstu",
+          "media": null,
+          "name": "t3_5bs7gl",
+          "score": 16,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/A2DMEjejS5FB1tS1r0mfpn9qWQ2H_xBh0Vq5mw1SzrY.jpg?s=9011864ff9800eda73a6a4bd9ab3cf0c",
+                  "width": 420,
+                  "height": 420
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/A2DMEjejS5FB1tS1r0mfpn9qWQ2H_xBh0Vq5mw1SzrY.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=4e9c44c67eb6b0b50552c0511d8d3a9b",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/A2DMEjejS5FB1tS1r0mfpn9qWQ2H_xBh0Vq5mw1SzrY.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=a7b632395dec5ed2c2342068e5b16796",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/A2DMEjejS5FB1tS1r0mfpn9qWQ2H_xBh0Vq5mw1SzrY.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=f6291bdaeb1f06b7360ab08e589cee13",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "v9SKEzj9fr7Vdury0l9b1jIDUdiSIBy5EeQKcazsYD8"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/eiuGNK6uj9ac2SciY71oFO0HtvCkrGkocH9ypEJQdhY.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5bs7gl/news_from_tip_os_add_executable_string_error/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478624325.0,
+          "url": "https://github.com/golang/go/commit/2fc67e71af142bfa1e7662a4fde361f43509d2d7",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "News from tip - os: add Executable() (string, error)",
+          "created_utc": 1478595525.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 0,
+          "visited": false,
+          "num_reports": null,
+          "ups": 16
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "github.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5bvt1n",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "jasonrichardsmith",
+          "media": null,
+          "name": "t3_5bvt1n",
+          "score": 1,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?s=59f8f9c4c389df012264d509de93be35",
+                  "width": 420,
+                  "height": 420
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=cf1ffd1cfd7db6892e5ec1bc3292fd31",
+                    "width": 108,
+                    "height": 108
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=01c560205563bdfc11a431bc3905cc83",
+                    "width": 216,
+                    "height": 216
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/XBNNMojJ1M-ll5QM7LGyjuq_NdJfWPqgKFkKpTC8VEM.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=cbfb64eb51237dba70910d2c8ab38bda",
+                    "width": 320,
+                    "height": 320
+                  }
+                ],
+                "variants": {},
+                "id": "XdjhiKtqsD27rNgOOBWBg3CpRT_2AIOYjMoMIG7JYcg"
+              }
+            ]
+          },
+          "thumbnail": "http://a.thumbs.redditmedia.com/jV88u-5qO64wuqUwdrBwcHUVn0hCsleNAs9MrfjxoI8.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5bvt1n/chain_cli_commands_wip/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478666563.0,
+          "url": "https://github.com/pipes-and-filters/filters",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Chain CLI commands [WIP]",
+          "created_utc": 1478637763.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 2,
+          "visited": false,
+          "num_reports": null,
+          "ups": 1
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "contest_mode": false,
+          "banned_by": null,
+          "domain": "medium.com",
+          "subreddit": "golang",
+          "selftext_html": null,
+          "selftext": "",
+          "likes": null,
+          "suggested_sort": null,
+          "user_reports": [],
+          "secure_media": null,
+          "saved": false,
+          "id": "5btbxs",
+          "gilded": 0,
+          "secure_media_embed": {},
+          "clicked": false,
+          "report_reasons": null,
+          "author": "dgryski",
+          "media": null,
+          "name": "t3_5btbxs",
+          "score": 1,
+          "approved_by": null,
+          "over_18": false,
+          "removal_reason": null,
+          "hidden": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://i.redditmedia.com/D9C_wnINax6K0Jkxp-Cg54BNGO1kVP4-KQPBwMBVYgU.jpg?s=07e3b58e33f045ea268c5342cef20322",
+                  "width": 897,
+                  "height": 485
+                },
+                "resolutions": [
+                  {
+                    "url": "https://i.redditmedia.com/D9C_wnINax6K0Jkxp-Cg54BNGO1kVP4-KQPBwMBVYgU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=ea5dfc0e0c96c4f9a1b148f4a7b21555",
+                    "width": 108,
+                    "height": 58
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/D9C_wnINax6K0Jkxp-Cg54BNGO1kVP4-KQPBwMBVYgU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=3ad859a0efb25df137d94aa32c5cfea5",
+                    "width": 216,
+                    "height": 116
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/D9C_wnINax6K0Jkxp-Cg54BNGO1kVP4-KQPBwMBVYgU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=873b18d6fd655ea8ddc1a960746fc526",
+                    "width": 320,
+                    "height": 173
+                  },
+                  {
+                    "url": "https://i.redditmedia.com/D9C_wnINax6K0Jkxp-Cg54BNGO1kVP4-KQPBwMBVYgU.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=6dd70ad5f6d14909159c0a95d1633ffc",
+                    "width": 640,
+                    "height": 346
+                  }
+                ],
+                "variants": {},
+                "id": "CjcAlgofAIvP-uAlUJsVKEKkJxGZkuFVKvpcfT21weg"
+              }
+            ]
+          },
+          "thumbnail": "http://b.thumbs.redditmedia.com/ew7rkJ1eDKj9TLSNcVKIWSaJb5tlbMO-C6quTa6EA1k.jpg",
+          "subreddit_id": "t5_2rc7j",
+          "edited": false,
+          "link_flair_css_class": null,
+          "author_flair_css_class": null,
+          "downs": 0,
+          "mod_reports": [],
+          "archived": false,
+          "media_embed": {},
+          "post_hint": "link",
+          "is_self": false,
+          "hide_score": false,
+          "spoiler": false,
+          "permalink": "/r/golang/comments/5btbxs/introducing_stow_cloud_storage_abstraction/",
+          "locked": false,
+          "stickied": false,
+          "created": 1478642405.0,
+          "url": "https://medium.com/@matryer/introducing-stow-cloud-storage-abstraction-package-for-go-20cf2928d93c",
+          "author_flair_text": null,
+          "quarantine": false,
+          "title": "Introducing Stow: Cloud storage abstraction package for Go",
+          "created_utc": 1478613605.0,
+          "link_flair_text": null,
+          "distinguished": null,
+          "num_comments": 7,
+          "visited": false,
+          "num_reports": null,
+          "ups": 1
+        }
+      }
+    ],
+    "after": "t3_5btbxs",
+    "before": null
+  }
+}

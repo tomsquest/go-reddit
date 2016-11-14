@@ -5,11 +5,9 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 ## Todo
 
 * Voir DI/IOC idiomatic Go
-* Concurrency: Prendre N subreddits en entrée
-* Github: Readme, badges, Travis, Cov (?), Vet (?)
-
 * Param "fakeReddit" pour ne pas appeler reddit
 * Config: SMTP, `UserAgent`
+* Gérer les posts sans thumbnails
 
 ## Learn
 
@@ -17,16 +15,17 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 * [x] fake http (simulate Reddit)
 * [x] Logging
 * [x] Testing
+* [x] Email
+* [x] Templating
 * [ ] Config file (Viper ?)
 * [ ] Mocking
 * [ ] Concurrency
-* [ ] Email
-* [ ] Templating
 
 ## Maybe
 
 ### Technical
 
+* Concurrency: Prendre N subreddits en entrée
 * Fwk de Mock
 * Dependency injection
 * Switch to `fasthttp`: https://godoc.org/github.com/valyala/fasthttp
@@ -44,6 +43,7 @@ func GetEntity(r *http.Request, v Entity) error {
 
 ### Functional
 
+* Github: Readme, badges, Travis, Cov (?), Vet (?)
 * Param pour prendre les tops du jours, de la semaine, du mois...
 * Limiter le nombre de posts (5, 10...) ou plus (possible ?)
 * User/Password...
