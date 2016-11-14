@@ -5,15 +5,12 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 ## Todo
 
 * Voir DI/IOC idiomatic Go
-* [Concurrency] Prendre N subreddits en entrée
-* Belle template
+* Concurrency: Prendre N subreddits en entrée
 * Github: Readme, badges, Travis, Cov (?), Vet (?)
 
 * Param "fakeReddit" pour ne pas appeler reddit
-* [Template] CSS Inline (Douceur) ou à la mano
-* [Template] Logo reddit (header + footer, le même ?)
-* Date du crawl en date+time (template)
-* [Config] SMTP, `UserAgent`
+* Template: CSS Inline (Douceur) ou à la mano
+* Config: SMTP, `UserAgent`
 
 ## Learn
 
