@@ -10,9 +10,9 @@ type PostsUnmarshaller interface {
 	UnmarshallPosts(data []byte) ([]Post, error)
 }
 
-type postsUnmarshaller struct{}
+type JsonPostUnmarshaller struct{}
 
-func (postsUnmarshaller) UnmarshallPosts(data []byte) ([]Post, error) {
+func (JsonPostUnmarshaller) UnmarshallPosts(data []byte) ([]Post, error) {
 	var resp response
 	err := json.Unmarshal(data, &resp)
 	if err != nil {

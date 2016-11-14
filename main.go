@@ -2,12 +2,10 @@ package main
 
 import (
 	"flag"
+	"github.com/tomsquest/go-reddit/http"
 	"github.com/tomsquest/go-reddit/output"
 	"github.com/tomsquest/go-reddit/reddit"
 	"log"
-	"math/rand"
-	"strconv"
-	"time"
 )
 
 //go:generate go-bindata -nomemcopy -o assets/assets.go -pkg assets assets
@@ -18,29 +16,21 @@ func main() {
 	fakeRedditParam := flag.Bool("fakeReddit", false, "Use predefined posts instead of calling Reddit")
 	flag.Parse()
 
-	client := reddit.NewClient()
-
-	var subreddit reddit.Subreddit
+	var httpClient http.HttpClient
 	if *fakeRedditParam {
-		posts := []reddit.Post{}
-		for i := 0; i < 10; i++ {
-			posts = append(posts, reddit.Post{
-				Title:       "Title " + strconv.Itoa(i),
-				Url:         "http://lorempixel.com/400/400/",
-				Permalink:   "https://www.reddit.com/r/golang/",
-				Thumbnail:   "http://lorempixel.com/400/400/",
-				Created:     reddit.PostTime{Time: time.Now()},
-				Ups:         rand.Intn(1000),
-				NumComments: rand.Intn(1000),
-			})
-		}
-		subreddit = reddit.NewSubreddit(*subredditNameParam, time.Now(), posts)
+		httpClient = &http.StaticResponseHttpClient{}
 	} else {
-		sub, err := client.GetTopPosts(*subredditNameParam)
-		subreddit = sub
-		if err != nil {
-			log.Fatalf("Unable to get posts of subreddit %v: %v", subredditNameParam, err)
-		}
+		httpClient = http.NewHttpClient("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0")
+	}
+
+	client := reddit.Reddit{
+		HttpClient:        httpClient,
+		PostsUnmarshaller: reddit.JsonPostUnmarshaller{},
+	}
+
+	subreddit, err := client.GetTopPosts(*subredditNameParam)
+	if err != nil {
+		log.Fatalf("Unable to get posts of subreddit %v: %v", subredditNameParam, err)
 	}
 
 	var selectedOutput output.Output

@@ -28,7 +28,7 @@ func TestUnmarshallOnePost(t *testing.T) {
 		}
 	`)
 
-	posts, err := postsUnmarshaller{}.UnmarshallPosts(data)
+	posts, err := JsonPostUnmarshaller{}.UnmarshallPosts(data)
 
 	if assert.NoError(t, err) {
 		if assert.Len(t, posts, 1) {
@@ -65,7 +65,7 @@ func TestUnmarshallTwoPosts(t *testing.T) {
 		}
 	`)
 
-	posts, err := postsUnmarshaller{}.UnmarshallPosts(data)
+	posts, err := JsonPostUnmarshaller{}.UnmarshallPosts(data)
 
 	if assert.NoError(t, err) {
 		if assert.Len(t, posts, 2) {
@@ -78,7 +78,7 @@ func TestUnmarshallTwoPosts(t *testing.T) {
 func TestUnmarshallNoPost(t *testing.T) {
 	data := []byte(`{}`)
 
-	posts, err := postsUnmarshaller{}.UnmarshallPosts(data)
+	posts, err := JsonPostUnmarshaller{}.UnmarshallPosts(data)
 
 	if assert.NoError(t, err) {
 		assert.Len(t, posts, 0)

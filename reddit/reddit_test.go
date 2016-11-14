@@ -8,10 +8,10 @@ import (
 )
 
 func TestGetTopPosts(t *testing.T) {
-	client := NewClient(
-		WithFakeClient("https://www.reddit.com/r/some-sub.json?t=week", "{}", nil),
-		WithFakePostsUnmarshaller([]byte("{}"), []Post{}, nil),
-	)
+	client := Reddit{
+		HttpClient:        &fakeClient{"https://www.reddit.com/r/some-sub.json?t=week", "{}", nil},
+		PostsUnmarshaller: &fakePostsUnmarshaller{[]byte("{}"), []Post{}, nil},
+	}
 
 	subreddit, err := client.GetTopPosts("some-sub")
 
@@ -21,9 +21,10 @@ func TestGetTopPosts(t *testing.T) {
 }
 
 func TestGetTopPosts_GivenAHttpError(t *testing.T) {
-	client := NewClient(
-		WithFakeClient("", "", errors.New("http error")),
-	)
+	client := Reddit{
+		HttpClient:        &fakeClient{"", "", errors.New("http error")},
+		PostsUnmarshaller: &fakePostsUnmarshaller{[]byte("{}"), []Post{}, nil},
+	}
 
 	_, err := client.GetTopPosts("some-sub")
 
@@ -31,20 +32,14 @@ func TestGetTopPosts_GivenAHttpError(t *testing.T) {
 }
 
 func TestGetTopPosts_GivenAnUnmarshallingError(t *testing.T) {
-	client := NewClient(
-		WithFakeClient("https://www.reddit.com/r/some-sub.json?t=week", "{}", nil),
-		WithFakePostsUnmarshaller(nil, nil, errors.New("unmarhall error")),
-	)
+	client := Reddit{
+		HttpClient:        &fakeClient{"https://www.reddit.com/r/some-sub.json?t=week", "{}", nil},
+		PostsUnmarshaller: &fakePostsUnmarshaller{nil, nil, errors.New("unmarhall error")},
+	}
 
 	_, err := client.GetTopPosts("some-sub")
 
 	assert.Error(t, err)
-}
-
-func WithFakeClient(givenUrl, thenResponse string, thenError error) option {
-	return func(reddit *Reddit) {
-		reddit.client = &fakeClient{givenUrl, thenResponse, thenError}
-	}
 }
 
 type fakeClient struct {
@@ -63,12 +58,6 @@ func (client *fakeClient) Get(url string) ([]byte, error) {
 	}
 
 	panic("Fake badly configured")
-}
-
-func WithFakePostsUnmarshaller(givenData []byte, thenPosts []Post, thenError error) option {
-	return func(reddit *Reddit) {
-		reddit.postsUnmarshaller = &fakePostsUnmarshaller{givenData, thenPosts, thenError}
-	}
 }
 
 type fakePostsUnmarshaller struct {

@@ -4,10 +4,9 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 
 ## Todo
 
-* Voir DI/IOC idiomatic Go
-* Param "fakeReddit" pour ne pas appeler reddit
 * Config: SMTP, `UserAgent`
 * Gérer les posts sans thumbnails
+* Simplifier les loggers pour ne pas avoir N packages
 
 ## Learn
 
