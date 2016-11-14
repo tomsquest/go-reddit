@@ -10,6 +10,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type SmtpOutput struct {
@@ -19,7 +20,7 @@ func (SmtpOutput) Out(subreddit reddit.Subreddit) error {
 	m := gomail.NewMessage()
 	m.SetHeader("From", "tom@tomsquest.com")
 	m.SetHeader("To", "tom@tomsquest.com")
-	m.SetHeader("Subject", "Subreddit "+strings.ToUpper(subreddit.Name)+" - "+subreddit.CrawlDate.Format("2006-01-02"))
+	m.SetHeader("Subject", "Subreddit "+strings.ToUpper(subreddit.Name)+" - "+toDate(subreddit.CrawlDate))
 	m.SetBody("text/html", prepareHtml(subreddit))
 	m.Embed("reddit_logo.png", gomail.SetCopyFunc(func(w io.Writer) error {
 		data, err := assets.Asset("assets/reddit_logo.png")
@@ -41,9 +42,24 @@ func prepareHtml(subreddit reddit.Subreddit) string {
 	funcs := template.FuncMap{
 		"title":   strings.Title,
 		"toUpper": strings.ToUpper,
+		"toDate":  toDate,
 	}
 
-	tmpl := template.Must(template.New("console").Funcs(funcs).Parse(string(data)))
+	tmpl := template.Must(template.New("html").Funcs(funcs).Parse(string(data)))
 	tmpl.Execute(buf, subreddit)
 	return buf.String()
+}
+
+func toDate(date interface{}) string {
+	var t time.Time
+	switch date := date.(type) {
+	case time.Time:
+		t = date
+	case reddit.PostTime:
+		t = date.Time
+	default:
+		t = time.Now()
+	}
+
+	return t.Format("2006-01-02 15:04:05")
 }
