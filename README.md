@@ -4,8 +4,6 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 
 ## Todo
 
-* Gérer les posts sans thumbnails
-* Supprimer le padding au dessus des titres des posts
 * Configuration par fichier: SMTP, `UserAgent`
 * Simplifier les loggers pour ne pas avoir N packages
 

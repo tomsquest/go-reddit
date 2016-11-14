@@ -97,10 +97,13 @@
 
         .titleContent {
             padding-top: 20px;
+        }
+
+        .postTitle {
             padding-bottom: 20px;
         }
 
-        .textContent {
+        .postContent {
             color: #404040;
             font-family: Helvetica, serif;
             font-size: 14px;
@@ -109,7 +112,7 @@
             padding-bottom: 20px;
         }
 
-        .textContent a {
+        .postContent a {
             color: #0079D3;
             text-decoration: underline;
         }
@@ -144,7 +147,10 @@
                                                                 <a href="https://www.reddit.com/r/{{.Name}}/">
                                                                     <img alt="logo" src="cid:reddit_logo.png"/>
                                                                 </a>
-                                                                <br/>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td valign="middle" align="center" class="titleContent">
                                                                 <h1>
                                                                     <a href="https://www.reddit.com/r/{{.Name}}/">
                                                                         {{.Name | toUpper}}
@@ -204,7 +210,7 @@
                                                                        cellspacing="0" width="280"
                                                                        class="flexibleContainer">
                                                                     <tr>
-                                                                        <td valign="top" class="titleContent">
+                                                                        <td valign="top" class="postTitle">
                                                                             <h3>
                                                                                 <a href="{{ .Url}}">
                                                                                     {{.Title | title}}
@@ -213,7 +219,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="middle" class="textContent">
+                                                                        <td valign="middle" class="postContent">
                                                                             Ups: <b>{{.Ups}}</b>
                                                                             <br/>
                                                                             Comments: {{.NumComments}}
@@ -222,7 +228,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td valign="middle" class="textContent">
+                                                                        <td valign="middle" class="postContent">
                                                                             <a href="{{ .Url}}">URL</a> |
                                                                             <a href="{{ .Permalink}}">Permalink</a>
                                                                         </td>
