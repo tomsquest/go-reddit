@@ -6,6 +6,7 @@ import (
 	"github.com/tomsquest/go-reddit/reddit"
 	"gopkg.in/gomail.v2"
 	"html/template"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -20,6 +21,11 @@ func (SmtpOutput) Out(subreddit reddit.Subreddit) error {
 	m.SetHeader("To", "tom@tomsquest.com")
 	m.SetHeader("Subject", "Subreddit "+strings.ToUpper(subreddit.Name)+" - "+subreddit.CrawlDate.Format("2006-01-02"))
 	m.SetBody("text/html", prepareHtml(subreddit))
+	m.Embed("reddit_logo.png", gomail.SetCopyFunc(func(w io.Writer) error {
+		data, err := assets.Asset("assets/reddit_logo.png")
+		w.Write(data)
+		return err
+	}))
 
 	host := os.Getenv("SMTP_HOST")
 	port, _ := strconv.Atoi(os.Getenv("SMTP_PORT"))
