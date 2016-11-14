@@ -24,7 +24,7 @@ func main() {
 	if *fakeRedditParam {
 		posts := []reddit.Post{}
 		for i := 0; i < 10; i++ {
-			posts = append(posts, reddit.Post{Title: "Title " + strconv.Itoa(i), Url: "http://lorempixel.com/400/400/", Thumbnail: "http://lorempixel.com/400/400/", Created: reddit.PostTime{Time: time.Now()}, Ups: rand.Int(), NumComments: rand.Int()})
+			posts = append(posts, reddit.Post{Title: "Title " + strconv.Itoa(i), Url: "http://lorempixel.com/400/400/", Thumbnail: "http://lorempixel.com/400/400/", Created: reddit.PostTime{Time: time.Now()}, Ups: rand.Intn(1000), NumComments: rand.Intn(1000)})
 		}
 		subreddit = reddit.NewSubreddit(*subredditNameParam, time.Now(), posts)
 	} else {
