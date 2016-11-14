@@ -19,7 +19,7 @@ func (JsonPostUnmarshaller) UnmarshallPosts(data []byte) ([]Post, error) {
 		return nil, err
 	}
 
-	posts := make([]Post, 0, 25)
+	posts := make([]Post, 0, len(resp.Data.Children))
 	for _, child := range resp.Data.Children {
 		posts = append(posts, child.Post)
 	}
