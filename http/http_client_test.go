@@ -3,6 +3,7 @@ package http
 import (
 	"fmt"
 	"github.com/stretchr/testify/assert"
+	"github.com/tomsquest/go-reddit/config"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -14,7 +15,7 @@ func TestGet_existingUrl(t *testing.T) {
 	}))
 	defer fakeServer.Close()
 
-	client := NewHttpClient("user-agent")
+	client := NewHttpClient(config.Config{})
 
 	resp, err := client.Get(fakeServer.URL + "/some-page")
 
@@ -29,7 +30,7 @@ func TestGet_AddUserAgent(t *testing.T) {
 	}))
 	defer fakeServer.Close()
 
-	client := NewHttpClient("test user agent")
+	client := NewHttpClient(config.Config{UserAgent: "test user agent"})
 
 	client.Get(fakeServer.URL + "/some-page")
 }
@@ -38,7 +39,7 @@ func TestGet_given404(t *testing.T) {
 	fakeServer := httptest.NewServer(http.NotFoundHandler())
 	defer fakeServer.Close()
 
-	client := NewHttpClient("user-agent")
+	client := NewHttpClient(config.Config{})
 
 	resp, err := client.Get(fakeServer.URL + "/unknown")
 

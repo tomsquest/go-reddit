@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/hashicorp/errwrap"
 	"github.com/mgutz/logxi/v1"
+	"github.com/tomsquest/go-reddit/config"
 	"io/ioutil"
 	"net/http"
 	"time"
@@ -20,14 +21,14 @@ type httpClient struct {
 	userAgent  string
 }
 
-func NewHttpClient(userAgent string) HttpClient {
+func NewHttpClient(cfg config.Config) HttpClient {
 	var client = &http.Client{
 		Timeout: time.Second * 20,
 	}
 
 	return &httpClient{
 		realClient: client,
-		userAgent:  userAgent,
+		userAgent:  cfg.UserAgent,
 	}
 }
 

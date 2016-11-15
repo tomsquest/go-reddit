@@ -3,18 +3,30 @@ package output
 import (
 	"github.com/mgutz/logxi/v1"
 	"github.com/tomsquest/go-reddit/assets"
+	"github.com/tomsquest/go-reddit/config"
 	"github.com/tomsquest/go-reddit/reddit"
 	"gopkg.in/gomail.v2"
 	"io"
-	"os"
-	"strconv"
 	"strings"
 )
 
 type SmtpOutput struct {
+	host string
+	port int
+	user string
+	pass string
 }
 
-func (SmtpOutput) Out(subreddit reddit.Subreddit) error {
+func NewSmtpOutput(cfg config.Config) *SmtpOutput {
+	return &SmtpOutput{
+		host: cfg.Smtp.Host,
+		port: cfg.Smtp.Port,
+		user: cfg.Smtp.User,
+		pass: cfg.Smtp.Pass,
+	}
+}
+
+func (out SmtpOutput) Out(subreddit reddit.Subreddit) error {
 	html, err := templatize(subreddit)
 	if err != nil {
 		return err
@@ -38,9 +50,5 @@ func (SmtpOutput) Out(subreddit reddit.Subreddit) error {
 
 	log.Info("Sending email", "subject", mail.GetHeader("Subject"))
 
-	host := os.Getenv("SMTP_HOST")
-	port, _ := strconv.Atoi(os.Getenv("SMTP_PORT"))
-	user := os.Getenv("SMTP_USER")
-	pass := os.Getenv("SMTP_PASS")
-	return gomail.NewDialer(host, port, user, pass).DialAndSend(mail)
+	return gomail.NewDialer(out.host, out.port, out.user, out.pass).DialAndSend(mail)
 }

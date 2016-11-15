@@ -5,6 +5,10 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 ## Todo
 
 * Configuration par fichier: SMTP, `UserAgent`
+* Fix: requêter les TOP: `https://www.reddit.com/r/golang/top/?sort=top&t=week`
+* Ajout param http.timeout
+* Vérifier si vraiment besoin de `errwrap`
+* Uniformiser les logs pour `go.log` ou `logxi`
 * Simplifier les loggers pour ne pas avoir N packages
 
 ## Learn
@@ -15,7 +19,7 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 * [x] Testing
 * [x] Email
 * [x] Templating
-* [ ] Config file (Viper ?)
+* [ ] Config file (Viper ? plain Json ?)
 * [ ] Mocking
 * [ ] Concurrency
 
