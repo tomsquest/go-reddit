@@ -24,7 +24,6 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 ### Technical
 
 * Fwk de Mock
-* Dependency injection
 * Switch to `fasthttp`: https://godoc.org/github.com/valyala/fasthttp
 * `http.Client` pourrait appeler la méthode `unmarshall`:
 
@@ -41,6 +40,7 @@ func GetEntity(r *http.Request, v Entity) error {
 ### Functional
 
 * Concurrency: Prendre N subreddits en entrée
+* Diminuer la taille de la template
 * Github: Readme, badges, Travis, Cov (?), Vet (?)
 * Param pour prendre les tops du jours, de la semaine, du mois...
 * Limiter le nombre de posts (5, 10...) ou plus (possible ?)
