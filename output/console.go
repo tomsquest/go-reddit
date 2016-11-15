@@ -9,7 +9,7 @@ type Console struct {
 }
 
 func (Console) Out(subreddit reddit.Subreddit) error {
-	fmt.Println("Subreddit", subreddit.Name, ", crawled at ", subreddit.CrawlDate.String())
+	fmt.Println("Subreddit", subreddit.Name, " crawled at ", subreddit.CrawlDate.String())
 
 	for idx, post := range subreddit.Posts() {
 		fmt.Printf("  -> Post %2d - %v\n", idx, substring(post.Title, 40))
