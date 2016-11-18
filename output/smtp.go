@@ -32,10 +32,14 @@ func (out SmtpOutput) Out(subreddit reddit.Subreddit) error {
 		return err
 	}
 
+	from := "tom@tomsquest.com"
+	to := "tom@tomsquest.com"
+	subject := "Subreddit " + strings.ToUpper(subreddit.Name) + " - " + toDate(subreddit.CrawlDate)
+
 	mail := gomail.NewMessage()
-	mail.SetHeader("From", "tom@tomsquest.com")
-	mail.SetHeader("To", "tom@tomsquest.com")
-	mail.SetHeader("Subject", "Subreddit "+strings.ToUpper(subreddit.Name)+" - "+toDate(subreddit.CrawlDate))
+	mail.SetHeader("From", from)
+	mail.SetHeader("To", to)
+	mail.SetHeader("Subject", subject)
 	mail.SetBody("text/html", html)
 	mail.Embed("reddit_logo.png", gomail.SetCopyFunc(func(w io.Writer) error {
 		data, err := assets.Asset("assets/reddit_logo.png")
@@ -48,7 +52,7 @@ func (out SmtpOutput) Out(subreddit reddit.Subreddit) error {
 		return err
 	}))
 
-	log.Info("Sending email", "subject", mail.GetHeader("Subject"))
+	log.Info("Sending email", "To", to, "From", from, "Subject", subject)
 
 	return gomail.NewDialer(out.host, out.port, out.user, out.pass).DialAndSend(mail)
 }

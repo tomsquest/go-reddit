@@ -10,6 +10,7 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 * Fix: requêter les TOP: `https://www.reddit.com/r/golang/top/?sort=top&t=week`
 * Github: Readme, badges, Travis, Cov (?), Vet (?)
 * Vérifier si vraiment besoin de `errwrap`
+* Configurable `from` and `to` in smtp output
 
 ### Nice to have (after release)
 
@@ -27,6 +28,7 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 
 #### Technical 
 
+* Rename `output.SmtpOutput` to `output.Smtp`
 * No dependency on Viper: use plain Json config file
 * Concurrency: Prendre N subreddits en entrée
 * Explore Go mocking libs
