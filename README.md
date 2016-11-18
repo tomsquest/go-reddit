@@ -9,7 +9,6 @@ Un binaire simple qui m'envoie par email la liste des Tops des subreddits config
 * Ne prendre qu'un subreddit en entrée en attendant la concurrence
 * Fix: requêter les TOP: `https://www.reddit.com/r/golang/top/?sort=top&t=week`
 * Github: Readme, badges, Travis, Cov (?), Vet (?)
-* Always use `logxi` instead of GO `log`
 * Vérifier si vraiment besoin de `errwrap`
 
 ### Nice to have (after release)

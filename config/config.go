@@ -3,8 +3,8 @@ package config
 import (
 	"fmt"
 	"github.com/hashicorp/errwrap"
+	"github.com/mgutz/logxi/v1"
 	"github.com/spf13/viper"
-	"log"
 )
 
 type SmtpConfig struct {
@@ -49,7 +49,7 @@ func Read() (cfg Config, err error) {
 		return cfg, errwrap.Wrapf("unable to decode into struct: {{err}}", err)
 	}
 
-	log.Println(cfg.String())
+	log.Info(cfg.String())
 	return
 }
 

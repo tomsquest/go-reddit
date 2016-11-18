@@ -1,11 +1,11 @@
 package main
 
 import (
+	"github.com/mgutz/logxi/v1"
 	"github.com/tomsquest/go-reddit/config"
 	"github.com/tomsquest/go-reddit/http"
 	"github.com/tomsquest/go-reddit/output"
 	"github.com/tomsquest/go-reddit/reddit"
-	"log"
 )
 
 //go:generate go-bindata -nomemcopy -o assets/assets.go -pkg assets assets
@@ -28,7 +28,7 @@ func main() {
 	subredditName := cfg.Subreddits[0]
 	subreddit, err := client.GetTopPosts(subredditName)
 	if err != nil {
-		log.Fatalf("Unable to get posts of subreddit %v: %v", subredditName, err)
+		log.Fatal("Unable to get posts", "subreddit", subredditName, "error", err)
 	}
 
 	var selectedOutput output.Output
@@ -40,6 +40,6 @@ func main() {
 	}
 
 	if err := selectedOutput.Out(subreddit); err != nil {
-		log.Fatalf("Unable to send : %v", err)
+		log.Fatal("Error in output", "err", err)
 	}
 }
