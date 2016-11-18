@@ -34,7 +34,7 @@ func main() {
 	var selectedOutput output.Output
 	switch cfg.Output {
 	case "mail":
-		selectedOutput = output.NewSmtpOutput(cfg)
+		selectedOutput = output.NewSmtpOutput(cfg.Smtp)
 	default:
 		selectedOutput = output.Console{}
 	}

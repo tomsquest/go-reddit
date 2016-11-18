@@ -11,19 +11,11 @@ import (
 )
 
 type SmtpOutput struct {
-	host string
-	port int
-	user string
-	pass string
+	cfg config.SmtpConfig
 }
 
-func NewSmtpOutput(cfg config.Config) *SmtpOutput {
-	return &SmtpOutput{
-		host: cfg.Smtp.Host,
-		port: cfg.Smtp.Port,
-		user: cfg.Smtp.User,
-		pass: cfg.Smtp.Pass,
-	}
+func NewSmtpOutput(cfg config.SmtpConfig) *SmtpOutput {
+	return &SmtpOutput{cfg}
 }
 
 func (out SmtpOutput) Out(subreddit reddit.Subreddit) error {
@@ -32,8 +24,8 @@ func (out SmtpOutput) Out(subreddit reddit.Subreddit) error {
 		return err
 	}
 
-	from := "tom@tomsquest.com"
-	to := "tom@tomsquest.com"
+	from := out.cfg.From
+	to := out.cfg.To
 	subject := "Subreddit " + strings.ToUpper(subreddit.Name) + " - " + toDate(subreddit.CrawlDate)
 
 	mail := gomail.NewMessage()
@@ -52,7 +44,7 @@ func (out SmtpOutput) Out(subreddit reddit.Subreddit) error {
 		return err
 	}))
 
-	log.Info("Sending email", "To", to, "From", from, "Subject", subject)
+	log.Info("Sending email", "From", from, "To", to, "Subject", subject)
 
-	return gomail.NewDialer(out.host, out.port, out.user, out.pass).DialAndSend(mail)
+	return gomail.NewDialer(out.cfg.Host, out.cfg.Port, out.cfg.User, out.cfg.Pass).DialAndSend(mail)
 }

@@ -8,6 +8,8 @@ import (
 )
 
 type SmtpConfig struct {
+	From string
+	To   string
 	Host string
 	Port int
 	User string
@@ -60,9 +62,12 @@ func (c *Config) String() string {
 - Output:      %v
 - Fake Reddit: %v
 - Smtp:
+	- From:    %v
+	- To  :    %v
 	- Host:    %v
 	- Port:    %v
 	- User:    %v
 	- Pass:    %v
-	`, c.Subreddits, c.UserAgent, c.Output, c.FakeReddit, c.Smtp.Host, c.Smtp.Port, c.Smtp.User, "(hidden)")
+	`, c.Subreddits, c.UserAgent, c.Output, c.FakeReddit,
+		c.Smtp.From, c.Smtp.To, c.Smtp.Host, c.Smtp.Port, c.Smtp.User, "(hidden)")
 }
