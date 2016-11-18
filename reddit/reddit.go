@@ -7,8 +7,6 @@ import (
 	"time"
 )
 
-var logger log.Logger = log.New("reddit")
-
 type Reddit struct {
 	HttpClient        http.HttpClient
 	PostsUnmarshaller PostsUnmarshaller
@@ -16,7 +14,7 @@ type Reddit struct {
 
 func (reddit *Reddit) GetTopPosts(subredditName string) (subreddit Subreddit, err error) {
 	url := "https://www.reddit.com/r/" + subredditName + ".json" + "?t=week"
-	logger.Info("Getting top posts", "subreddit", subredditName, "url", url)
+	log.Info("Getting top posts", "subreddit", subredditName, "url", url)
 
 	data, err := reddit.HttpClient.Get(url)
 	if err != nil {
@@ -28,10 +26,10 @@ func (reddit *Reddit) GetTopPosts(subredditName string) (subreddit Subreddit, er
 		return subreddit, errwrap.Wrapf("Unable to unmarshall posts: {{err}}", err)
 	}
 
-	if logger.IsDebug() {
-		logger.Debug("Posts", len(posts))
+	if log.IsDebug() {
+		log.Debug("Posts", len(posts))
 		for i, post := range posts {
-			logger.Debug("Post", "index", i, "post", post)
+			log.Debug("Post", "index", i, "post", post)
 		}
 	}
 

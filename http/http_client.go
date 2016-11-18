@@ -10,8 +10,6 @@ import (
 	"time"
 )
 
-var logger log.Logger = log.New("http")
-
 type HttpClient interface {
 	Get(string) ([]byte, error)
 }
@@ -40,7 +38,7 @@ func (client *httpClient) Get(url string) ([]byte, error) {
 
 	req.Header.Set("User-Agent", client.userAgent)
 
-	logger.Info("Get", "url", url)
+	log.Info("Get", "url", url)
 	resp, err := client.realClient.Do(req)
 	if err != nil {
 		return nil, errwrap.Wrapf("Error calling "+url+": {{err}}\n", err)
@@ -50,7 +48,7 @@ func (client *httpClient) Get(url string) ([]byte, error) {
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf(resp.Status)
 	}
-	logger.Debug("Go response", "status", resp.Status)
+	log.Debug("Go response", "status", resp.Status)
 
 	b, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
