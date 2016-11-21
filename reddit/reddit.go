@@ -13,7 +13,7 @@ type Reddit struct {
 }
 
 func (reddit *Reddit) GetTopPosts(subredditName string) (subreddit Subreddit, err error) {
-	url := "https://www.reddit.com/r/" + subredditName + ".json" + "?t=week"
+	url := "https://www.reddit.com/r/" + subredditName + "/top.json/?sort=top&t=week"
 	log.Info("Getting top posts", "subreddit", subredditName, "url", url)
 
 	data, err := reddit.HttpClient.Get(url)

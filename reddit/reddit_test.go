@@ -9,7 +9,7 @@ import (
 
 func TestGetTopPosts(t *testing.T) {
 	client := Reddit{
-		HttpClient:        &fakeClient{"https://www.reddit.com/r/some-sub.json?t=week", "{}", nil},
+		HttpClient:        &fakeClient{"https://www.reddit.com/r/some-sub/top.json/?sort=top&t=week", "{}", nil},
 		PostsUnmarshaller: &fakePostsUnmarshaller{[]byte("{}"), []Post{}, nil},
 	}
 
@@ -33,7 +33,7 @@ func TestGetTopPosts_GivenAHttpError(t *testing.T) {
 
 func TestGetTopPosts_GivenAnUnmarshallingError(t *testing.T) {
 	client := Reddit{
-		HttpClient:        &fakeClient{"https://www.reddit.com/r/some-sub.json?t=week", "{}", nil},
+		HttpClient:        &fakeClient{"https://www.reddit.com/r/some-sub/top.json/?sort=top&t=week", "{}", nil},
 		PostsUnmarshaller: &fakePostsUnmarshaller{nil, nil, errors.New("unmarhall error")},
 	}
 
